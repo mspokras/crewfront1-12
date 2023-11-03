@@ -7,7 +7,7 @@ const Dashboard = () => {
     return (
         <TemplatePage>
           <ContractGraph/>
-            <CustomerGraph/>
+          <CustomerGraph/>
         </TemplatePage>
     );
 };

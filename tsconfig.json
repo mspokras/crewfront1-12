@@ -1,15 +1,17 @@
 {
   "compilerOptions": {
-    "target": "ESNext",  // Choose your target version
-    "module": "ESNext",  // Choose your module system
+    "target": "esnext",  
+    "module": "esnext",  
+    "moduleResolution": "node", 
     "outDir": "./dist",
+    "resolveJsonModule": true,
     "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
-    "jsx": "react",       // Add this line to specify JSX as React
+    "jsx": "react",      
   },
   "include": [
-    "src/**/*.ts", "src/**/*.tsx"  // Include .tsx files
+    "src/**/*.ts", "src/**/*.tsx"  
   ],
   "exclude": [
     "node_modules"
