@@ -4,9 +4,10 @@ import CustomerGraphContainer from "../../entities/Customer/components/CustomerG
 import ViewReportButton from "../../features/ViewReportButton/ViewReportButton";
 
 const CustomerGraph = () => {
+    const customerFilters = ['7 Days', '30 Days', '1 Year', 'All']
     return (
-        <div>
-            <CustomerGraphContainer filter={<GraphFilters/>} right={<ViewReportButton/>}/>
+        <div className='customer-graph'>
+            <CustomerGraphContainer filter={<GraphFilters filters={customerFilters} />} button={<ViewReportButton/>}/>
         </div>
     );
 };

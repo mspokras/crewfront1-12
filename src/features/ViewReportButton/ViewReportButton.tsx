@@ -1,11 +1,9 @@
 import React from 'react';
-import Button from "../../shared/components/Button/FilterButton/FilterButton";
+import SectionButton from '../../shared/components/Button/SectionButton/SectionButton';
 
 const ViewReportButton = () => {
     return (
-        <div>
-            <Button/>
-        </div>
+        <SectionButton>View Report</SectionButton>
     );
 };
 

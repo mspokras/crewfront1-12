@@ -1,19 +1,15 @@
-.contract-graph-container {
+.customer-graph-container {
   width: 1064px;
-  height: 398px;
-  margin: 32px;
-  padding: 0 0 24px 24px;
+  height: 413px;
+  margin: 32px 32px 48px;
+  padding: 24px;
   background-color: #fff;
   border: 1px solid #EAECF0;
   border-radius: 12px;
   box-shadow: 0px 1px 2px 0px #1018280D;
 
-  .contract-header {
+  .customer-header {
     display: flex;
     justify-content: space-between;
-
-    .contract-left {
-      margin-top: 24px;
-    }
   }
 }

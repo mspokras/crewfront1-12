@@ -5,18 +5,18 @@ import './ContractGraphContainer.scss';
 
 interface ContractGraphProps {
     filter: React.ReactNode
-    right: React.ReactNode
+    dynamics: React.ReactNode
 }
 const ContractGraphCard = (props: ContractGraphProps) => {
-    const {filter, right} = props
+    const {filter, dynamics} = props
     return (
-        <div>
-            <div>
-                <div>
+        <div className='contract-graph-container'>
+            <div className='contract-header'>
+                <div className='contract-left'>
                     <BlockTitle>Contracts</BlockTitle>
                     {filter}
                 </div>
-                {right}
+                {dynamics}
             </div>
 
             <Graph/>

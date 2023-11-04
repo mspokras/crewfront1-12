@@ -1,12 +1,18 @@
 import React from 'react';
 import './FilterButton.scss';
 
-const Button = () => {
+interface propTypes {
+    children: React.ReactNode;
+    className?: string;
+    onClick?: () => void;
+}
+const FilterButton = (props: propTypes) => {
+    const { children, onClick, className } = props;
     return (
-        <div className="filter-button-container">
-            <div className="filter-button">Button</div>
+        <div className={`filter-button-container ${className}`} onClick={onClick}>
+            <button className={`filter-button ${className}`}>{children}</button>
         </div>
     );
 };
 
-export default Button;
+export default FilterButton;

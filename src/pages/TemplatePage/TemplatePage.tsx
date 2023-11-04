@@ -1,6 +1,7 @@
 import React from 'react';
 import PageHeader from "../../widgets/PageHeader/PageHeader";
 import Navigation from "../../widgets/Navigation/Navigation";
+import './TemplatePage.scss';
 
 interface TemplatePageProps {
     children: React.ReactNode
@@ -8,10 +9,12 @@ interface TemplatePageProps {
 const TemplatePage = (props: TemplatePageProps) => {
     const {children} = props
     return (
-        <div>
+        <div className='template-page'>
             <Navigation/>
-            <PageHeader/>
-            {children}
+            <div className='page-container'>
+                <PageHeader/>
+                {children}
+            </div>
         </div>
     );
 };

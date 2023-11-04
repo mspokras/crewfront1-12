@@ -1,21 +1,22 @@
 import React from 'react';
 import BlockTitle from "../../../../shared/components/Title/BlockTitle/BlockTitle";
 import Graph from "../../../../shared/components/Charts/Graph/Graph";
+import './CustomerGraphContainer.scss';
 
 interface CustomerGraphContainerProps {
     filter: React.ReactNode
-    right: React.ReactNode
+    button: React.ReactNode
 }
 const CustomerGraphContainer = (props: CustomerGraphContainerProps) => {
-    const { filter, right } = props
+    const { filter, button } = props
     return (
-        <div>
-            <div>
-                <div>
+        <div className='customer-graph-container'>
+            <div className='customer-header'>
+                <div className='customer-left'>
                     <BlockTitle>Customer Satisfaction</BlockTitle>
                     {filter}
                 </div>
-                {right}
+                {button}
             </div>
 
             <Graph/>

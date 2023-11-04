@@ -1,13 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FilterButton from "../../shared/components/Button/FilterButton/FilterButton";
+import './GraphFilters.scss';
 
-const GraphFilters = () => {
+interface propTypes {
+    filters: string[]
+}
+
+const GraphFilters = ({ filters }: propTypes) => {
+    const [selectedFilter, setSelectedFilter] = useState(filters[0]);
+
+    const handleFilterClick = (filter: string) => {
+        setSelectedFilter(filter);
+    };
+
     return (
-        <div>
-            <FilterButton />
-            <FilterButton />
-            <FilterButton />
-            <FilterButton />
+        <div className='graph-filters'>
+            {filters.map((filter)=>(
+                <FilterButton 
+                    key={filter} 
+                    onClick={() => handleFilterClick(filter)}
+                    className={filter === selectedFilter ? 'active' : ''}
+                >
+                    {filter}
+                </FilterButton>
+            ))}
         </div>
     );
 };
