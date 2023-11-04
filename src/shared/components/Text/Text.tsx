@@ -1,10 +1,15 @@
 import React from 'react';
+import './Text.scss'
 
-const Text = () => {
+interface TextProps {
+    children: React.ReactNode
+}
+const Text = (props: TextProps) => {
+    const { children } = props;
     return (
-        <div>
-            
-        </div>
+        <h1 className='text'>
+            {children}
+        </h1>
     );
 };
 

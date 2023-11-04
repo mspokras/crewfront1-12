@@ -1,6 +1,7 @@
 import React from 'react';
-import Title from "../../../../shared/components/Title/Title/Title";
+import BlockTitle from "../../../../shared/components/Title/BlockTitle/BlockTitle";
 import Graph from "../../../../shared/components/Charts/Graph/Graph";
+import './ContractGraphContainer.scss';
 
 interface ContractGraphProps {
     filter: React.ReactNode
@@ -12,7 +13,7 @@ const ContractGraphCard = (props: ContractGraphProps) => {
         <div>
             <div>
                 <div>
-                    <Title/>
+                    <BlockTitle>Contracts</BlockTitle>
                     {filter}
                 </div>
                 {right}

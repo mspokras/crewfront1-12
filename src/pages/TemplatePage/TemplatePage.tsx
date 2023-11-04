@@ -9,8 +9,8 @@ const TemplatePage = (props: TemplatePageProps) => {
     const {children} = props
     return (
         <div>
-            <PageHeader/>
             <Navigation/>
+            <PageHeader/>
             {children}
         </div>
     );

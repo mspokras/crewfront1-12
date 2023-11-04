@@ -1,13 +1,13 @@
 import React from 'react';
-import Button from "../../shared/components/Button/Button";
+import FilterButton from "../../shared/components/Button/FilterButton/FilterButton";
 
 const GraphFilters = () => {
     return (
         <div>
-            <Button/>
-            <Button/>
-            <Button/>
-            <Button/>
+            <FilterButton />
+            <FilterButton />
+            <FilterButton />
+            <FilterButton />
         </div>
     );
 };

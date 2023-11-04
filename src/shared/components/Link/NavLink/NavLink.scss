@@ -1,0 +1,21 @@
+.nav-link {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #575758;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: #F9FAFB;
+    color: #101828;
+  }
+
+  .nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+  }
+}

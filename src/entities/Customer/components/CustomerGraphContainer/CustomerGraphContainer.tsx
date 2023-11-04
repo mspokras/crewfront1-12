@@ -1,5 +1,5 @@
 import React from 'react';
-import Title from "../../../../shared/components/Title/Title/Title";
+import BlockTitle from "../../../../shared/components/Title/BlockTitle/BlockTitle";
 import Graph from "../../../../shared/components/Charts/Graph/Graph";
 
 interface CustomerGraphContainerProps {
@@ -12,7 +12,7 @@ const CustomerGraphContainer = (props: CustomerGraphContainerProps) => {
         <div>
             <div>
                 <div>
-                    <Title/>
+                    <BlockTitle>Customer Satisfaction</BlockTitle>
                     {filter}
                 </div>
                 {right}

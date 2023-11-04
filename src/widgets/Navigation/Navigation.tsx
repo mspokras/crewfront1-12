@@ -1,14 +1,17 @@
 import React from 'react';
-import HeaderNavigation from "./components/HeaderNavigation/HeaderNavigation";
-import BodyNavigation from "./components/BodyNavigation/BodyNavigation";
-import FooterNavigation from "./components/FooterNavigation/FooterNavigation";
+import NavHeader from "./components/NavHeader/NavHeader";
+import NavMenu from "./components/NavMenu/NavMenu";
+import NavFooter from "./components/FooterNavigation/NavFooter";
+import './Navigation.scss';
 
 const Navigation = () => {
     return (
-        <div>
-            <HeaderNavigation/>
-            <BodyNavigation/>
-            <FooterNavigation/>
+        <div className='nav-container'>
+            <div className='nav-body'>
+                <NavHeader />
+                <NavMenu />
+            </div>
+            <NavFooter />
         </div>
     );
 };

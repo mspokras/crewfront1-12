@@ -1,0 +1,27 @@
+.contract-dynamics {
+  width: 297px;
+  max-height: 124px;
+  padding: 24px 24px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #EAECF0;
+  border-radius: 12px;
+  box-shadow: 0px 1px 2px 0px #1018280D;
+  box-sizing: border-box;
+
+  .text {
+    margin: 0;
+  }
+
+  &_numbers {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .chips-dynamics {
+      margin-top: 4px;
+    }
+  }
+}

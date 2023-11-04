@@ -1,0 +1,20 @@
+.chips-dynamics {
+  height: 24px;
+  padding: 4px 10px 4px 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: #ECFDF3;
+  border: 1px solid #ABEFC6;
+  border-radius: 16px;
+  box-sizing: border-box;
+
+  .chips-percentage {
+    color: #067647;
+    margin-left: 4px;
+  }
+}
