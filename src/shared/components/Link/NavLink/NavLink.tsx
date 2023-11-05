@@ -1,12 +1,12 @@
 import React from 'react';
 import './NavLink.scss';
 
-interface propTypes {
+interface PropTypes {
     icon: string,
     label: string,
 }
 
-const NavLink = ({icon, label}: propTypes) => {
+const NavLink = ({icon, label}: PropTypes) => {
     return (
         <a href="#" className='nav-link'>
             <div className='nav-icon'>

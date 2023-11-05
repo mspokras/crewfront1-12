@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import FilterButton from "../../shared/components/Button/FilterButton/FilterButton";
 import './GraphFilters.scss';
 
-interface propTypes {
+interface PropTypes {
     filters: string[]
 }
 
-const GraphFilters = ({ filters }: propTypes) => {
+const GraphFilters = ({ filters }: PropTypes) => {
     const [selectedFilter, setSelectedFilter] = useState(filters[0]);
 
     const handleFilterClick = (filter: string) => {

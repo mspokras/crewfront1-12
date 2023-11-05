@@ -2,13 +2,13 @@ import React from 'react';
 import './PageTitle.scss';
 
 interface PageTitleProps {
-    children: React.ReactNode
+    title: string
 }
 const PageTitle = (props: PageTitleProps) => {
-    const { children } = props;
+    const { title } = props;
     return (
         <div className='page-title'>
-            {children}
+            {title}
         </div>
     );
 };

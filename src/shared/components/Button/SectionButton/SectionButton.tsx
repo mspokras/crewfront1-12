@@ -1,15 +1,15 @@
 import React from 'react';
 import './SectionButton.scss';
 
-interface propTypes {
-  children: React.ReactNode
+interface PropTypes {
+  title: string
 }
 
-const SectionButton = (props: propTypes) => {
-  const { children } = props;
+const SectionButton = (props: PropTypes) => {
+  const { title } = props;
   return (
     <div className='section-button'>
-      {children}
+      {title}
     </div>
   );
 };

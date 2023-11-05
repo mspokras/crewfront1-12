@@ -9,6 +9,8 @@ interface CustomerGraphContainerProps {
 }
 const CustomerGraphContainer = (props: CustomerGraphContainerProps) => {
     const { filter, button } = props
+    const yData = [200, 180, 300, 250, 280, 460, 490, 600, 650, 805, 780, 950];
+    const xData = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     return (
         <div className='customer-graph-container'>
             <div className='customer-header'>
@@ -19,7 +21,7 @@ const CustomerGraphContainer = (props: CustomerGraphContainerProps) => {
                 {button}
             </div>
 
-            <Graph/>
+            <Graph xData={xData} yData={yData} />
         </div>
     );
 };

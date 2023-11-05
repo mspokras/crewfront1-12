@@ -7,9 +7,9 @@ import './ContractDynamics.scss';
 const ContractDynamics = () => {
     return (
         <div className='contract-dynamics'>
-            <Text>Contracts last 1 year</Text>
+            <Text label="Contracts last 1 year" />
             <div className='contract-dynamics_numbers'>
-                    <NumberLabel>2,000</NumberLabel>
+                    <NumberLabel number='2,000' />
                     <ChipsDynamics />   
             </div>
         </div>

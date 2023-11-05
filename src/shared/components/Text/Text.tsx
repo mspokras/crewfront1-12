@@ -2,13 +2,13 @@ import React from 'react';
 import './Text.scss'
 
 interface TextProps {
-    children: React.ReactNode
+    label: string
 }
 const Text = (props: TextProps) => {
-    const { children } = props;
+    const { label } = props;
     return (
         <h1 className='text'>
-            {children}
+            {label}
         </h1>
     );
 };

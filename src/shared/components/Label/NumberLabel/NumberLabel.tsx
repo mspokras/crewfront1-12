@@ -2,13 +2,13 @@ import React from 'react';
 import './NumberLabel.scss';
 
 interface NumberLabelProps {
-  children: React.ReactNode
+  number: string
 }
 const NumberLabel = (props: NumberLabelProps) => {
-  const { children } = props;
+  const { number } = props;
   return (
     <div className='number-label'>
-        {children}
+        {number}
     </div>
   );
 };

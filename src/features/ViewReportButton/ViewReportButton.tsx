@@ -3,7 +3,7 @@ import SectionButton from '../../shared/components/Button/SectionButton/SectionB
 
 const ViewReportButton = () => {
     return (
-        <SectionButton>View Report</SectionButton>
+        <SectionButton title="View Report" />
     );
 };
 

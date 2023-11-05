@@ -7,7 +7,7 @@ const HeaderNavigation = () => {
     return (
         <div className='nav-header'>
             <img className='nav-logo' src={Logo} alt="header-navigation" />
-            <PageTitle>Crew</PageTitle>
+            <PageTitle title="Crew" />
         </div>
     );
 };

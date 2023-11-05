@@ -2,27 +2,24 @@ import { LineChart } from '@mui/x-charts';
 import React from 'react';
 import './Graph.scss';
 
-const Graph = () => {
-    const uData: number[] = [4000, 3000, 2000, 2780, 1890, 2390, 3490];
-    const xLabels: string[] = [
-        'Page A',
-        'Page B',
-        'Page C',
-        'Page D',
-        'Page E',
-        'Page F',
-        'Page G',
-    ];
+interface GraphProps {
+    xData: string[],
+    yData: number[]
+}
+
+const Graph = (props: GraphProps) => {
+    const { xData, yData } = props;
     return (
-        <div>
+        <div className='graph'>
             <LineChart
-                width={500}
-                height={300}
-                series={[{ data: uData, label: 'uv', area: true, showMark: false }]}
-                xAxis={[{ scaleType: 'point', data: xLabels }]}
+                className='line-chart'
+                width={1016}
+                height={240}
+                series={[{ data: yData, area: true, showMark: false, color: '#141A7F' }]}
+                xAxis={[{ data: xData, scaleType: 'point' }]}
                 sx={{
                     '.MuiLineElement-root': {
-                    display: 'none',
+                        display: 'none',
                     },
                 }}
             />

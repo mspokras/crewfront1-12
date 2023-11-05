@@ -6,7 +6,7 @@ import './PageHeader.scss';
 const PageHeader = () => {
     return (
         <div className='page-header'>
-            <PageTitle>Dashboard</PageTitle>
+            <PageTitle title="Dashboard" />
             <UserAvatar/>
         </div>
     );
