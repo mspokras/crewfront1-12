@@ -16,7 +16,7 @@ const LoginForm = () => {
         <FormInput label="Password*" placeholder="Create a password" />
       </div>
       <div className='login-btns'>
-        <Link to='/dashboard'><SectionButton label='Log in' /></Link>
+        <Link to='/dashboard'><SectionButton label='Log in' isFilled/></Link>
         <IconButton icon={googleIcon} label="Sign in with Google" />
       </div>
     </form>

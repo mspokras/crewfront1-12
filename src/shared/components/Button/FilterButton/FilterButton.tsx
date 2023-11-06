@@ -1,5 +1,6 @@
 import React from 'react';
 import './FilterButton.scss';
+import classNames from "classnames";
 
 interface PropTypes {
     children: React.ReactNode;
@@ -9,7 +10,7 @@ interface PropTypes {
 const FilterButton = (props: PropTypes) => {
     const { children, onClick, className } = props;
     return (
-        <div className={`filter-button-container ${className}`} onClick={onClick}>
+        <div className={classNames("filter-button-container",className)} onClick={onClick}>
             <button className={`filter-button ${className}`}>{children}</button>
         </div>
     );

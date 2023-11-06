@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
-import './IconButton.scss';
+import SectionButton from "../SectionButton/SectionButton";
+
 
 interface PropTypes {
   icon: string | undefined;
@@ -9,10 +10,9 @@ interface PropTypes {
 const IconButton = (props: PropTypes) => {
   const { icon, label } = props;
   return (
-    <div className='icon-button'>
-      <img src={icon} alt="icon" />
-      {label}
-    </div>
+      <SectionButton label={label}>
+        <img src={icon} alt="icon" />
+      </SectionButton>
   );
 };
 
