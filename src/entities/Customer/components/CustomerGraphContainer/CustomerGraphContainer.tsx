@@ -11,6 +11,11 @@ const CustomerGraphContainer = (props: CustomerGraphContainerProps) => {
     const { filter, button } = props
     const yData = [200, 180, 300, 250, 280, 460, 490, 600, 650, 805, 780, 950];
     const xData = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const graphStyles = {
+        '.MuiChartsAxis-left': {
+            display: 'none'
+        },
+    };
     return (
         <section className='customer-graph-container'>
             <div className='customer-header'>
@@ -21,7 +26,7 @@ const CustomerGraphContainer = (props: CustomerGraphContainerProps) => {
                 {button}
             </div>
 
-            <Graph xData={xData} yData={yData} />
+            <Graph xData={xData} yData={yData} styles={graphStyles} />
         </section>
     );
 };
