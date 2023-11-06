@@ -15,12 +15,26 @@ const Graph = (props: GraphProps) => {
                 className='line-chart'
                 width={1016}
                 height={240}
-                series={[{ data: yData, area: true, showMark: false, color: '#141A7F' }]}
+                series={[{ data: yData, area: true, showMark: false }]}
                 xAxis={[{ data: xData, scaleType: 'point' }]}
                 sx={{
                     '.MuiLineElement-root': {
-                        display: 'none',
+                        stroke: '#141A7F',
                     },
+                    '.MuiAreaElement-root': {
+                        fill: '#F5F2FC',
+                    },
+                    '.MuiChartsAxis-tickLabel': {
+                        fontFamily: 'IBM Plex Sans',
+                        fill: '#475467 !important'
+                    },
+                    'MuiChartsAxis-line': {
+                        stroke: '0 !important',
+                        strokeWidth: '0 !important'
+                    },
+                    'MuiChartsAxis-tick': {
+                        stroke: '0'
+                    }
                 }}
             />
         </div>

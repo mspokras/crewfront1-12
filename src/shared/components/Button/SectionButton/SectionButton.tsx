@@ -2,14 +2,14 @@ import React from 'react';
 import './SectionButton.scss';
 
 interface PropTypes {
-  title: string
+  label: string
 }
 
 const SectionButton = (props: PropTypes) => {
-  const { title } = props;
+  const { label } = props;
   return (
-    <div className='section-button'>
-      {title}
+    <div className="section-button">
+      {label}
     </div>
   );
 };

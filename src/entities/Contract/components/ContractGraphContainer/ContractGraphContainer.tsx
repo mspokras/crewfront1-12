@@ -12,7 +12,7 @@ const ContractGraphCard = (props: ContractGraphProps) => {
     const xData = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const {filter, dynamics} = props
     return (
-        <div className='contract-graph-container'>
+        <section className='contract-graph-container'>
             <div className='contract-header'>
                 <div className='contract-left'>
                     <BlockTitle>Contracts</BlockTitle>
@@ -22,7 +22,7 @@ const ContractGraphCard = (props: ContractGraphProps) => {
             </div>
 
             <Graph xData={xData} yData={yData} />
-        </div>
+        </section>
     );
 };
 

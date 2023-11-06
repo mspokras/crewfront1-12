@@ -9,13 +9,13 @@ import './NavMenu.scss';
 
 const BodyNavigation = () => {
     return (
-        <div className='nav-menu'>
+        <nav className='nav-menu'>
             <NavLink icon={iconDashboard} label="My Dashboard" />
             <NavLink icon={iconCustomer} label="Customer Care" />
             <NavLink icon={iconOrg} label="Organisations" />
             <NavLink icon={iconContacts} label="Contacts" />
             <NavLink icon={iconOrders} label="Orders" />
-        </div>
+        </nav>
     );
 };
 
