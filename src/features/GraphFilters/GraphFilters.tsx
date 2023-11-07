@@ -18,11 +18,10 @@ const GraphFilters = ({ filters }: PropTypes) => {
             {filters.map((filter)=>(
                 <FilterButton 
                     key={filter} 
+                    title={filter}
                     onClick={() => handleFilterClick(filter)}
-                    className={filter === selectedFilter ? 'active' : ''}
-                >
-                    {filter}
-                </FilterButton>
+                    isActive={filter === selectedFilter}
+                />
             ))}
         </div>
     );

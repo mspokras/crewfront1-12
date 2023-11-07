@@ -3,15 +3,15 @@ import './FilterButton.scss';
 import classNames from "classnames";
 
 interface PropTypes {
-    children: React.ReactNode;
-    className?: string;
+    title: string;
+    isActive?: boolean;
     onClick?: () => void;
 }
 const FilterButton = (props: PropTypes) => {
-    const { children, onClick, className } = props;
+    const { title, onClick, isActive } = props;
     return (
-        <div className={classNames("filter-button-container",className)} onClick={onClick}>
-            <button className={`filter-button ${className}`}>{children}</button>
+        <div className={classNames("filter-button-container", { 'active': isActive })} onClick={onClick}>
+            <button className={`filter-button ${isActive ? 'active' : ''}`}>{title}</button>
         </div>
     );
 };

@@ -9,7 +9,7 @@ const ContractDynamics = () => {
         <div className='contract-dynamics'>
             <Text label="Contracts last 1 year" />
             <div className='contract-dynamics_numbers'>
-                    <NumberLabel number='2,000' />
+                    <NumberLabel number="2,000" />
                     <ChipsDynamics />   
             </div>
         </div>

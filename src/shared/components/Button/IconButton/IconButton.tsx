@@ -1,9 +1,9 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import SectionButton from "../SectionButton/SectionButton";
 
 
 interface PropTypes {
-  icon: string | undefined;
+  icon?: string;
   label: string
 }
 
