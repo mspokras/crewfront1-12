@@ -7,18 +7,20 @@ interface PropTypes {
   children?: React.ReactNode;
   isFilled?: boolean;
   onClick?: () => void;
+  type?: 'button' | 'submit'
 }
 
 const SectionButton = (props: PropTypes) => {
-  const { label, children, isFilled, onClick } = props;
+  const { label, children, isFilled, onClick,type } = props;
   return (
-    <div 
+    <button
       className={ classNames("section-button",{ "isFilled":isFilled })}
       onClick={onClick}
+      type={type}
     >
       {children}
       {label}
-    </div>
+    </button>
   );
 };
 

@@ -1,20 +1,19 @@
-import React, { ChangeEvent } from 'react';
+import React from 'react';
 import './FormInput.scss';
 
 interface PropTypes {
   label: string;
   placeholder?: string,
-  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const FormInput = (props: PropTypes) => {
-  const { label, placeholder, onChange } = props;
+const FormInput = React.forwardRef<HTMLInputElement,PropTypes>((props, ref) => {
+  const { label, placeholder, ...rest } = props;
   return (
     <div className="form-control">
       <label className="form-label" htmlFor="form-input">{label}</label>
-      <input className="form-input" id="form-input" type="text" onChange={onChange} placeholder={placeholder} />
+      <input className="form-input" ref={ref} id="form-input" type="text"  placeholder={placeholder}  {...rest}/>
     </div>
   );
-};
+});
 
 export default FormInput;
