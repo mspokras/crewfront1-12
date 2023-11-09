@@ -1,7 +1,7 @@
 import {FetchBaseQueryArgs} from "@reduxjs/toolkit/dist/query/fetchBaseQuery";
 
 export const baseQueryConfig: FetchBaseQueryArgs = {
-    baseUrl: "http://localhost:5000",
+    // baseUrl: "http://localhost:5000",
     prepareHeaders: (headers, {endpoint}) => {
         // const session = getToken();
         // const {language} = i18n;

@@ -7,13 +7,11 @@ import CustomerCare from '../../pages/CustomerCare/CustomerCare';
 
 function App() {
     return (
-      <BrowserRouter>
-        <Routes>
-            <Route index element={<FormContainer/>}/>
-            <Route path='/dashboard' element={<Dashboard/>}/>
-            <Route path='/customer-care' element={<CustomerCare />} />
-        </Routes>
-      </BrowserRouter>
+      <Routes>
+          <Route index element={<FormContainer/>}/>
+          <Route path='/dashboard' element={<Dashboard/>}/>
+          <Route path='/customer-care' element={<CustomerCare />} />
+      </Routes>
     );
 }
 

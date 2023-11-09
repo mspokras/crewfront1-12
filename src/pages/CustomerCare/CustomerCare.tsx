@@ -1,15 +1,13 @@
 import React from 'react';
 import TemplatePage from '../TemplatePage/TemplatePage';
 import './CustomerCare.scss';
-import CustomerCard from '../../entities/Customer/CustomerCard/CustomerCard';
+import CustomerCards from '../../widgets/CustomerCards/CustomerCards';
 
 const CustomerCare = () => {
   return (
     <div className='customer-care'>
       <TemplatePage title="Customer Care">
-        <CustomerCard /> 
-        <CustomerCard /> 
-        <CustomerCard /> 
+        <CustomerCards />
       </TemplatePage>
     </div>
   );

@@ -11,7 +11,7 @@ const FilterButton = (props: PropTypes) => {
     const { title, onClick, isActive } = props;
     return (
         <div className={classNames("filter-button-container", { 'active': isActive })} onClick={onClick}>
-            <button className={`filter-button ${isActive ? 'active' : ''}`}>{title}</button>
+            <button className={classNames("filter-button", { 'active': isActive })}>{title}</button>
         </div>
     );
 };
