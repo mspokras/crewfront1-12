@@ -4,15 +4,16 @@ import Navigation from "../../widgets/Navigation/Navigation";
 import './TemplatePage.scss';
 
 interface TemplatePageProps {
-    children: React.ReactNode
+    children: React.ReactNode;
+    title?: string;
 }
 const TemplatePage = (props: TemplatePageProps) => {
-    const {children} = props
+    const { children, title } = props
     return (
         <div className='template-page'>
             <Navigation/>
             <div className='page-container'>
-                <PageHeader/>
+                <PageHeader title={title} />
                 {children}
             </div>
         </div>

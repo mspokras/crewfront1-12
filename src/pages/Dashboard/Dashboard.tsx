@@ -7,7 +7,7 @@ import './Dashboard.scss';
 const Dashboard = () => {
     return (
       <div className='dashboard'>
-        <TemplatePage>
+        <TemplatePage title="Dashboard" >
           <ContractGraph/>
           <CustomerGraph/>
         </TemplatePage>

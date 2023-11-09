@@ -6,7 +6,7 @@ import './NavFooter.scss';
 const FooterNavigation = () => {
     return (
         <div className='nav-footer'>
-            <NavLink icon={Logout} label="Log out" />
+            <NavLink icon={Logout} label="Log out" path="/" />
         </div>
     );
 };

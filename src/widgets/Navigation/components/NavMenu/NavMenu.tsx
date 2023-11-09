@@ -10,11 +10,11 @@ import './NavMenu.scss';
 const BodyNavigation = () => {
     return (
         <nav className='nav-menu'>
-            <NavLink icon={iconDashboard} label="My Dashboard" />
-            <NavLink icon={iconCustomer} label="Customer Care" />
-            <NavLink icon={iconOrg} label="Organisations" />
-            <NavLink icon={iconContacts} label="Contacts" />
-            <NavLink icon={iconOrders} label="Orders" />
+            <NavLink icon={iconDashboard} label="My Dashboard" path="/dashboard" />
+            <NavLink icon={iconCustomer} label="Customer Care" path="/customer-care" />
+            <NavLink icon={iconOrg} label="Organisations" path="/dashboard" />
+            <NavLink icon={iconContacts} label="Contacts" path="/dashboard" />
+            <NavLink icon={iconOrders} label="Orders" path="/dashboard" />
         </nav>
     );
 };

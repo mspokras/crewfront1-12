@@ -2,7 +2,7 @@ import React from 'react';
 import './PageTitle.scss';
 
 interface PageTitleProps {
-    title: string
+    title?: string
 }
 const PageTitle = (props: PageTitleProps) => {
     const { title } = props;
