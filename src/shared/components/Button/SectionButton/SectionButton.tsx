@@ -11,10 +11,10 @@ interface PropTypes {
 }
 
 const SectionButton = (props: PropTypes) => {
-  const { label, children, isFilled, onClick,type } = props;
+  const { label, children, isFilled, onClick, type } = props;
   return (
     <button
-      className={ classNames("section-button",{ "isFilled":isFilled })}
+      className={classNames("section-button", { "isFilled": isFilled })}
       onClick={onClick}
       type={type}
     >
