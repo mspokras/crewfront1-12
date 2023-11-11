@@ -13,6 +13,10 @@ interface PropTypes {
 const CustomerCard = (props: PropTypes) => {
   const { rating, status, name, phone, email } = props;
 
+  const openWhatsApp = () => {
+    window.location.href = `https://wa.me/${phone}`;
+  };
+
   const handleEmailClick = () => {
     window.location.href = `mailto:${email}`;
   };
@@ -39,7 +43,7 @@ const CustomerCard = (props: PropTypes) => {
         </div>
         <div className='card-person'>
           <div className='card-name'>{name}</div>
-          <div className='card-phone'>{phone}</div>
+          <a className='card-phone' href={`tel:${phone}`} onClick={openWhatsApp}>{phone}</a>
           <div className='card-email' onClick={handleEmailClick}>{email}</div>
         </div>
       </div>

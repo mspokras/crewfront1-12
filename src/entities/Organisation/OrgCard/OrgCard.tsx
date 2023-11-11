@@ -14,6 +14,16 @@ interface PropTypes {
 
 const OrgCard = (props: PropTypes) => {
   const { rating, name, orders, funds, phone, email } = props;
+
+  const handleEmailClick = () => {
+    window.location.href = `mailto:${email}`;
+  };
+
+  const openWhatsApp = () => {
+    window.location.href = `https://wa.me/${phone}`;
+  };
+
+
   return (
     <div className='org-card'>
       <div className='org-content'>
@@ -33,8 +43,8 @@ const OrgCard = (props: PropTypes) => {
           </div>
         </div>
         <div className='org-contact'>
-          <div className='org-whatsapp'>{phone}</div>
-          <div className='org-email'>{email}</div>
+          <a href={`tel:${phone}`} className="org-phone" onClick={openWhatsApp}>{phone}</a>
+          <div className='org-email' onClick={handleEmailClick}>{email}</div>
         </div>
       </div>
       <SectionButton label="Show organisation" />

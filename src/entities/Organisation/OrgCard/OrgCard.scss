@@ -50,9 +50,12 @@
     
     .org-contact {
       cursor: pointer;
-      color: mediumblue;
-      text-decoration: underline;
       font-size: 15px;
+
+      .org-phone, .org-email {
+        color: mediumblue;
+        text-decoration: underline;
+      }
     }
   }
 }
