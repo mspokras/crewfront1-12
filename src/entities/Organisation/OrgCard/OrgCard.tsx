@@ -22,14 +22,13 @@ const OrgCard = (props: PropTypes) => {
   const openWhatsApp = () => {
     window.location.href = `https://wa.me/${phone}`;
   };
-
-
+  
   return (
     <div className='org-card'>
       <div className='org-content'>
         <div className='org-rating'>
           <img src={star} alt="star" />
-          <div className='org-avnum'>{rating}</div>
+          <div className='org-avnum'>{rating.toFixed(1)}</div>
         </div>
         <div className='org-name'>{name}</div>
         <div className='org-stats'>

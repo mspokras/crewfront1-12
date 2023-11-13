@@ -1,0 +1,49 @@
+.contact-card {
+  width: 100%;
+  height: 80px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #EAECF0;
+  border-radius: 12px;
+  box-shadow: 0px 1px 2px 0px #1018280D;
+
+  .contact-content {
+    display: flex;
+    align-items: center;
+
+    .contact-name {
+      width: 200px;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 26px;
+    }
+
+    .contact-company {
+      width: 175px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 26px;
+    }
+
+    .contact-phone, .contact-email {
+      width: 170px;
+      color: mediumblue;
+      text-decoration: underline;
+      cursor: pointer;
+      font-size: 15px;
+    }
+  }
+
+  .section-button {
+    width: 220px;
+    text-align: center;
+    transition: 0.3s ease;
+    &:hover {
+      color: #141A7F !important;
+      background-color: #fff !important;
+    }
+  }
+}

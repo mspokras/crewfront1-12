@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Sophia Anderson",
+    "company": "Google",
+    "email": "s.anderson@google.com",
+    "phone": "+1(555)123-4567",
+    "location": "New York City"
+  },
+  {
+    "name": "Ethan Johnson",
+    "company": "Apple",
+    "email": "ethan.johnson@apple.com",
+    "phone": "+1(987)654-3210",
+    "location": "London"
+  },
+  {
+    "name": "Isabella Williams",
+    "company": "Amazon",
+    "email": "i.williams@amazon.com",
+    "phone": "+1(111)222-3333",
+    "location": "San Francisco"
+  },
+  {
+    "name": "Liam Smith",
+    "company": "Microsoft",
+    "email": "liam.smith@microsoft.com",
+    "phone": "+1(777)888-9999",
+    "location": "Toronto"
+  },
+  {
+    "name": "Olivia Brown",
+    "company": "Tesla",
+    "email": "olivia.brown@tesla.com",
+    "phone": "+1(444)555-6666",
+    "location": "Paris"
+  },
+  {
+    "name": "Noah Wilson",
+    "company": "Facebook",
+    "email": "noah.wilson@facebook.com",
+    "phone": "+1(123)456-7890",
+    "location": "New York City"
+  },
+  {
+    "name": "Ava Taylor",
+    "company": "Meta",
+    "email": "a.taylor@meta.com",
+    "phone": "+1(987)654-3210",
+    "location": "Los Angeles"
+  },
+  {
+    "name": "William Lee",
+    "company": "Alphabet",
+    "email": "william.lee@alphabet.com",
+    "phone": "+1(999)888-7777",
+    "location": "San Francisco"
+  },
+  {
+    "name": "Amelia Martinez",
+    "company": "IBM",
+    "email": "amelia.martinez@ibm.com",
+    "phone": "+1(111)222-3333",
+    "location": "Warsaw"
+  },
+  {
+    "name": "James Garcia",
+    "company": "Samsung",
+    "email": "james.garcia@samsung.com",
+    "phone": "+1(123)456-7890",
+    "location": "Kyiv"
+  }
+]

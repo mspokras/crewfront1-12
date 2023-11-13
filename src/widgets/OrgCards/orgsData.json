@@ -46,5 +46,21 @@
     "funds": 75000,
     "phone": "+1(997)547-33-26",
     "email": "recruitment@ford.org"
+  },
+  {
+    "rating": 4.4,
+    "name": "Huawei",
+    "orders": 186,
+    "funds": 150000,
+    "phone": "+1(767)445-33-74",
+    "email": "coop@huawei.org"
+  },
+  {
+    "rating": 5.0,
+    "name": "Toyota",
+    "orders": 7,
+    "funds": 12000,
+    "phone": "+1(304)775-44-34",
+    "email": "partners@toyota.com"
   }
 ]
