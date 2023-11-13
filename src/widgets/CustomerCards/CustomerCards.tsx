@@ -1,16 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CustomerCard from '../../entities/Customer/CustomerCard/CustomerCard';
+import cardsData from './customersData.json';
 import './CustomerCards.scss';
+import FilterButton from '../../shared/components/Button/FilterButton/FilterButton';
 
 const CustomerCards = () => {
+  const [currentFilter, setCurrentFilter] = useState("All");
+  const filters = ['All', 'Handled', 'Needs Handling'];
+
+  const handleFilterChange = (newFilter: string) => {
+    setCurrentFilter(newFilter);
+  }
+
+  const filterCards = (status: string) => {
+    if (currentFilter === 'All') {
+      return true;
+    }
+    return status === currentFilter;
+  };
+
   return (
-    <div className='customer-cards'>
-      <CustomerCard rating={4} status="Needs Handling" name="James Bond" email="james.bond@gmail.com" phone="+1(406)785-9989" />
-      <CustomerCard rating={5} status="Handled" name="Alex Reynolds" email="alex.reynolds@gmail.com" phone="+44(793)274-4455" />
-      <CustomerCard rating={3} status="Needs Handling" name="Emily Chen" email="emily.chen@gmail.com" phone="+1(223)452-5523" />
-      <CustomerCard rating={4} status="Handled" name="Daniel Mitchell" email="daniel.mitchell@gmail.com" phone="+1(596)343-3443" />
-      <CustomerCard rating={5} status="Handled" name="Olivia Foster" email="olivia.foster@gmail.com" phone="+61(214)323-4564" />
-      <CustomerCard rating={4} status="Handled" name="Ethan Martinez" email="ethan.martinez@gmail.com" phone="+52(800)356-3233" />
+    <div className="customer-cards-container">
+      <div className="customer-filters">
+        {filters.map((filter) => (
+          <FilterButton key={filter} title={filter} onClick={() => handleFilterChange(filter)} isActive={currentFilter === filter} />
+        ))}
+      </div>
+      <div className='customer-cards'>
+        {cardsData
+          .filter((card) => filterCards(card.status))
+          .map((card, index) => (
+            <CustomerCard key={index} {...card} />
+        ))}
+      </div>
     </div>
   );
 };

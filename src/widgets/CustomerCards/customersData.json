@@ -1,0 +1,58 @@
+[
+  {
+    "rating": 4,
+    "status": "Needs Handling",
+    "name": "James Bond",
+    "email": "james.bond@gmail.com",
+    "phone": "+1(406)785-9989"
+  },
+  {
+    "rating": 5,
+    "status": "Handled",
+    "name": "Alex Reynolds",
+    "email": "alex.reynolds@gmail.com",
+    "phone": "+44(793)274-4455"
+  },
+  {
+    "rating": 3,
+    "status": "Needs Handling",
+    "name": "Emily Chen",
+    "email": "emily.chen@gmail.com",
+    "phone": "+1(223)452-5523"
+  },
+  {
+    "rating": 4,
+    "status": "Handled",
+    "name": "Daniel Mitchell",
+    "email": "daniel.mitchell@gmail.com",
+    "phone": "+1(596)343-3443"
+  },
+  {
+    "rating": 5,
+    "status": "Handled",
+    "name": "Olivia Foster",
+    "email": "olivia.foster@gmail.com",
+    "phone": "+61(214)323-4564"
+  },
+  {
+    "rating": 4,
+    "status": "Handled",
+    "name": "Ethan Martinez",
+    "email": "ethan.martinez@gmail.com",
+    "phone": "+52(800)356-3233"
+  },
+  {
+    "rating": 5,
+    "status": "Handled",
+    "name": "Alexa Smith",
+    "email": "alexxxa@gmail.com",
+    "phone": "+1(222)635-5734"
+  },
+  {
+    "rating": 4,
+    "status": "Needs Handling",
+    "name": "Cecilia Banks",
+    "email": "c_banks.fb@gmail.com",
+    "phone": "+52(677)334-2267"
+  }
+]
