@@ -30,7 +30,11 @@ const CustomerCards = () => {
         {cardsData
           .filter((card) => filterCards(card.status))
           .map((card, index) => (
-            <CustomerCard key={index} {...card} />
+            <CustomerCard 
+              key={index} 
+              className={index % 2 === 0 ? 'blue-card' : 'white-card'} 
+              {...card} 
+            />
         ))}
       </div>
     </div>

@@ -1,18 +1,20 @@
 import React from 'react';
 import './OrderCard.scss';
 import SectionButton from '../../../shared/components/Button/SectionButton/SectionButton';
+import classNames from "classnames";
 
 interface PropTypes {
+  className?: string;
   number: number;
   date: string;
-  funds: number
+  funds: number;
 }
 
 const OrderCard = (props: PropTypes) => {
-  const { number, date, funds } = props;
+  const { className, number, date, funds } = props;
 
   return (
-    <div className='order-card'>
+    <div className={classNames("order-card", className)}>
       <div className="order-content">
         <div className="order-number">#{number}</div>
         <div className="order-date">{date}</div>

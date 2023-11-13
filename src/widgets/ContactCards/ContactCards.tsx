@@ -7,7 +7,11 @@ const ContactCards = () => {
   return (
     <div className='contact-cards'>
       {cardsData.map((card, index)=>(
-        <ContactCard key={index} {...card} />
+        <ContactCard 
+          key={index} 
+          className={index % 2 === 0 ? 'blue-card' : 'white-card'} 
+          {...card} 
+        />
       ))}
     </div>
   );

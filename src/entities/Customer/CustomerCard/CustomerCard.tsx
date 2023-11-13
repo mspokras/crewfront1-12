@@ -2,8 +2,10 @@ import React from 'react';
 import star from '../../../assets/icons/star.svg'
 import './CustomerCard.scss';
 import SectionButton from '../../../shared/components/Button/SectionButton/SectionButton';
+import classNames from "classnames";
 
 interface PropTypes {
+  className: string;
   rating: number;
   status: string;
   name: string;
@@ -11,7 +13,7 @@ interface PropTypes {
   email: string;
 }
 const CustomerCard = (props: PropTypes) => {
-  const { rating, status, name, phone, email } = props;
+  const { className, rating, status, name, phone, email } = props;
 
   const openWhatsApp = () => {
     window.location.href = `https://wa.me/${phone}`;
@@ -35,7 +37,7 @@ const CustomerCard = (props: PropTypes) => {
   ));
 
   return (
-    <div className='customer-card card'>
+    <div className={classNames('customer-card', className)}>
       <div className='card-content'>
         <div className='card-visuals'>
           <div className='card-rating'>{stars}</div>

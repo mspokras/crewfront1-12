@@ -7,7 +7,11 @@ const OrgCards = () => {
   return (
     <div className='org-cards'>
       {cardsData.map((card, index)=>(
-        <OrgCard key={index} {...card} />
+        <OrgCard 
+          key={index} 
+          className={index % 2 === 0 ? 'blue-card' : 'white-card'} 
+          {...card} 
+        />
       ))}
     </div>
   );

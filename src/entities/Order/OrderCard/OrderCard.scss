@@ -5,7 +5,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
   border: 1px solid #EAECF0;
   border-radius: 12px;
   box-shadow: 0px 1px 2px 0px #1018280D;
@@ -43,4 +42,12 @@
       background-color: #fff !important;
     }
   }
+}
+
+.blue-card {
+  background-color: #FFF;
+}
+
+.white-card {
+  background-color: #E7EFFF;
 }

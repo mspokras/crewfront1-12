@@ -1,8 +1,10 @@
 import React from 'react';
 import './ContactCard.scss';
 import SectionButton from '../../../shared/components/Button/SectionButton/SectionButton';
+import classNames from 'classnames';
 
 interface PropTypes {
+  className: string;
   name: string;
   company: string;
   email: string;
@@ -11,7 +13,7 @@ interface PropTypes {
 }
 
 const ContactCard = (props: PropTypes) => {
-  const { name, company, email, phone, location } = props;
+  const { className, name, company, email, phone, location } = props;
 
   const handleEmailClick = () => {
     window.location.href = `mailto:${email}`;
@@ -23,7 +25,7 @@ const ContactCard = (props: PropTypes) => {
 
   const branchLabel = `Branch: ${location}`; 
   return (
-    <div className='contact-card'>
+    <div className={classNames('contact-card', className)}>
       <div className="contact-content">
         <div className="contact-name">{name}</div>
         <div className="contact-company">{company}</div>

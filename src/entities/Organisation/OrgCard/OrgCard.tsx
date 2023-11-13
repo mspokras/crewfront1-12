@@ -2,8 +2,10 @@ import React from 'react';
 import SectionButton from '../../../shared/components/Button/SectionButton/SectionButton';
 import star from '../../../assets/icons/star.svg'
 import './OrgCard.scss';
+import classNames from 'classnames';
 
 interface PropTypes {
+  className: string;
   rating: number;
   name: string;
   orders: number;
@@ -13,7 +15,7 @@ interface PropTypes {
 }
 
 const OrgCard = (props: PropTypes) => {
-  const { rating, name, orders, funds, phone, email } = props;
+  const { className, rating, name, orders, funds, phone, email } = props;
 
   const handleEmailClick = () => {
     window.location.href = `mailto:${email}`;
@@ -24,7 +26,7 @@ const OrgCard = (props: PropTypes) => {
   };
   
   return (
-    <div className='org-card'>
+    <div className={classNames('org-card', className)}>
       <div className='org-content'>
         <div className='org-rating'>
           <img src={star} alt="star" />

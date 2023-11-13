@@ -13,7 +13,7 @@
   .contact-content {
     display: flex;
     align-items: center;
-
+    
     .contact-name {
       width: 200px;
       font-size: 18px;
@@ -36,7 +36,7 @@
       font-size: 15px;
     }
   }
-
+  
   .section-button {
     width: 220px;
     text-align: center;
@@ -46,4 +46,12 @@
       background-color: #fff !important;
     }
   }
+}
+
+.blue-card {
+  background-color: #FFF;
+}
+
+.white-card {
+  background-color: #E7EFFF;
 }
