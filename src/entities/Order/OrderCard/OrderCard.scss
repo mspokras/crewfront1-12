@@ -1,0 +1,46 @@
+.order-card {
+  width: 600px;
+  height: 72px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #EAECF0;
+  border-radius: 12px;
+  box-shadow: 0px 1px 2px 0px #1018280D;
+
+  .order-content {
+    display: flex;
+    align-items: center;
+
+    .order-number {
+      width: 120px;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 26px;
+    }
+
+    .order-date, .order-funds {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 26px;
+    }
+
+    .order-date {
+      width: 150px;
+    }
+
+    .order-funds {
+      width: 110px;
+    }
+  }
+
+  .section-button {
+    transition: 0.3s ease;
+    &:hover {
+      color: #141A7F !important;
+      background-color: #fff !important;
+    }
+  }
+}
