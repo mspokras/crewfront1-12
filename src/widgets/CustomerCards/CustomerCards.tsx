@@ -6,14 +6,18 @@ import FilterButton from '../../shared/components/Button/FilterButton/FilterButt
 
 const CustomerCards = () => {
   const [currentFilter, setCurrentFilter] = useState("All");
-  const filters = ['All', 'Handled', 'Needs Handling'];
+  const filters = {
+    all: 'All',
+    handled: 'Handled',
+    needsHandling: 'Needs Handling',
+  };
 
   const handleFilterChange = (newFilter: string) => {
     setCurrentFilter(newFilter);
   }
 
   const filterCards = (status: string) => {
-    if (currentFilter === 'All') {
+    if (currentFilter === filters.all) {
       return true;
     }
     return status === currentFilter;
@@ -22,7 +26,7 @@ const CustomerCards = () => {
   return (
     <div className="customer-cards-container">
       <div className="customer-filters">
-        {filters.map((filter) => (
+        {Object.values(filters).map((filter) => (
           <FilterButton key={filter} title={filter} onClick={() => handleFilterChange(filter)} isActive={currentFilter === filter} />
         ))}
       </div>
@@ -31,7 +35,7 @@ const CustomerCards = () => {
           .filter((card) => filterCards(card.status))
           .map((card, index) => (
             <CustomerCard 
-              key={index} 
+              key={card.id} 
               className={index % 2 === 0 ? 'blue-card' : 'white-card'} 
               {...card} 
             />

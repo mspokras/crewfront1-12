@@ -3,6 +3,8 @@ import SectionButton from '../../../shared/components/Button/SectionButton/Secti
 import star from '../../../assets/icons/star.svg'
 import './OrgCard.scss';
 import classNames from 'classnames';
+import EmailLink from '../../../shared/components/Link/EmailLink/EmailLink';
+import WhatsAppLink from '../../../shared/components/Link/WhatsAppLink/WhatsAppLink';
 
 interface PropTypes {
   className: string;
@@ -17,14 +19,6 @@ interface PropTypes {
 const OrgCard = (props: PropTypes) => {
   const { className, rating, name, orders, funds, phone, email } = props;
 
-  const handleEmailClick = () => {
-    window.location.href = `mailto:${email}`;
-  };
-
-  const openWhatsApp = () => {
-    window.location.href = `https://wa.me/${phone}`;
-  };
-  
   return (
     <div className={classNames('org-card', className)}>
       <div className='org-content'>
@@ -44,9 +38,9 @@ const OrgCard = (props: PropTypes) => {
           </div>
         </div>
         <div className='org-contact'>
-          <a href={`tel:${phone}`} className="org-phone" onClick={openWhatsApp}>{phone}</a>
-          <div className='org-email' onClick={handleEmailClick}>{email}</div>
-        </div>
+          <WhatsAppLink phone={phone} className='org-phone' />
+          <EmailLink email={email} className="org-email" />
+         </div>
       </div>
       <SectionButton label="Show organisation" />
     </div>

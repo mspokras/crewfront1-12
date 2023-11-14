@@ -30,10 +30,13 @@
 
     .contact-phone, .contact-email {
       width: 170px;
+      font-size: 15px;
+    }
+
+    .contact-phone {
       color: mediumblue;
       text-decoration: underline;
       cursor: pointer;
-      font-size: 15px;
     }
   }
   

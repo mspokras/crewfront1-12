@@ -8,7 +8,7 @@ const ContactCards = () => {
     <div className='contact-cards'>
       {cardsData.map((card, index)=>(
         <ContactCard 
-          key={index} 
+          key={card.id} 
           className={index % 2 === 0 ? 'blue-card' : 'white-card'} 
           {...card} 
         />

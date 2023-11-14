@@ -49,10 +49,11 @@
     }
     
     .org-contact {
-      cursor: pointer;
       font-size: 15px;
 
-      .org-phone, .org-email {
+      .org-phone {
+        cursor: pointer;
+        display: block;
         color: mediumblue;
         text-decoration: underline;
       }

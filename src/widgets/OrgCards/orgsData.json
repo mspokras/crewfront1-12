@@ -1,5 +1,6 @@
 [
   {
+    "id": 1001,
     "rating": 4.5,
     "name": "McDonald's",
     "orders": 388,
@@ -8,6 +9,7 @@
     "email": "contact@mcdonalds.com"
   },
   {
+    "id": 1002,
     "rating": 4.2,
     "name": "Honda",
     "orders": 15,
@@ -16,6 +18,7 @@
     "email": "hnd@gmail.com"
   },
   {
+    "id": 1003,
     "rating": 4.8,
     "name": "Samsung",
     "orders": 62,
@@ -24,6 +27,7 @@
     "email": "global.corp@samsung.org"
   },
   {
+    "id": 1004,
     "rating": 3.6,
     "name": "Adidas",
     "orders": 252,
@@ -32,6 +36,7 @@
     "email": "hr.department@adidas.com"
   },
   {
+    "id": 1005,
     "rating": 4.9,
     "name": "Boeing",
     "orders": 107,
@@ -40,6 +45,7 @@
     "email": "hr@boeing.com"
   },
   {
+    "id": 1006,
     "rating": 4.6,
     "name": "Ford",
     "orders": 23,
@@ -48,6 +54,7 @@
     "email": "recruitment@ford.org"
   },
   {
+    "id": 1007,
     "rating": 4.4,
     "name": "Huawei",
     "orders": 186,
@@ -56,6 +63,7 @@
     "email": "coop@huawei.org"
   },
   {
+    "id": 1008,
     "rating": 5.0,
     "name": "Toyota",
     "orders": 7,

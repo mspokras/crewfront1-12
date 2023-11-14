@@ -8,7 +8,7 @@ const OrgCards = () => {
     <div className='org-cards'>
       {cardsData.map((card, index)=>(
         <OrgCard 
-          key={index} 
+          key={card.id} 
           className={index % 2 === 0 ? 'blue-card' : 'white-card'} 
           {...card} 
         />

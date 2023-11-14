@@ -8,7 +8,7 @@ const OrderCards = () => {
     <div className='order-cards'>
       {cardsData.map((card, index) => (
         <OrderCard 
-          key={index} 
+          key={card.number} 
           className={index % 2 === 0 ? 'blue-card' : 'white-card'} 
           {...card} 
         />
