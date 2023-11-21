@@ -20,7 +20,7 @@ const OrderCard = (props: PropTypes) => {
         <div className="order-date">{date}</div>
         <div className="order-funds">${funds}</div>
       </div>
-      <SectionButton label="More details" isFilled={true} />
+      <SectionButton label="More details" isFilled={false} />
     </div>
   );
 };

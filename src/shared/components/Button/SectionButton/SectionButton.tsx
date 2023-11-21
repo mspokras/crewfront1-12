@@ -14,7 +14,7 @@ const SectionButton = (props: PropTypes) => {
   const { label, children, isFilled, onClick, type } = props;
   return (
     <button
-      className={classNames("section-button", { "isFilled": isFilled })}
+      className={classNames("section-button", { "filled": isFilled })}
       onClick={onClick}
       type={type}
     >

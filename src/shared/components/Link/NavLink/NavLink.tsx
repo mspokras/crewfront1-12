@@ -10,7 +10,6 @@ interface PropTypes {
 
 const NavLink = ({icon, label, path}: PropTypes) => {
     return (
-        // eslint-disable-next-line jsx-a11y/anchor-is-valid
         <Link to={path} className='nav-link'>
             <div className='nav-icon'>
                 <img src={icon} alt="icon-dashboard" />

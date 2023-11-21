@@ -26,7 +26,7 @@ const ContactCard = (props: PropTypes) => {
         <WhatsAppLink phone={phone} className='contact-phone' />
         <EmailLink email={email} className="contact-email" />
       </div>
-      <SectionButton label={branchLabel} isFilled={true} />
+      <SectionButton label={branchLabel} isFilled={false} />
     </div>
   );
 };
