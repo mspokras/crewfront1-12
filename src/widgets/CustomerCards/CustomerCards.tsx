@@ -5,11 +5,11 @@ import './CustomerCards.scss';
 import FilterButton from '../../shared/components/Button/FilterButton/FilterButton';
 
 const CustomerCards = () => {
-  const [currentFilter, setCurrentFilter] = useState("All");
+  const [currentFilter, setCurrentFilter] = useState("Needs Handling");
   const filters = {
-    all: 'All',
-    handled: 'Handled',
     needsHandling: 'Needs Handling',
+    handled: 'Handled',
+    all: 'All',
   };
 
   const handleFilterChange = (newFilter: string) => {

@@ -1,17 +1,15 @@
 import React from 'react';
 import './FormWrapper.scss';
 import PageTitle from '../../../shared/components/Title/PageTitle/PageTitle';
-import LoginBottomLink from '../../../shared/components/Link/LoginBottomLink/LoginBottomLink';
 import PageLogo from '../../../shared/components/PageLogo/PageLogo';
 import bigLogo from '../../../assets/icons/logo-big.svg';
 
 interface PropTypes {
   pageTitle: string;
-  page: "login" | "signup";
   children: React.ReactNode;
 }
 const FormWrapper = (props: PropTypes) => {
-  const { pageTitle, page, children } = props;
+  const { pageTitle, children } = props;
   return (
     <div className='form-container'> 
       <div className='form-left'>
@@ -19,8 +17,7 @@ const FormWrapper = (props: PropTypes) => {
         <div className='form-wrapper'>
           <div className="form-content">
             <PageTitle title={pageTitle} />
-              {children}
-            <LoginBottomLink page={page} />
+            {children}
           </div>
         </div>
       </div>
