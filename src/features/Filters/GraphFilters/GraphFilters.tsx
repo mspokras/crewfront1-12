@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import FilterButton from "../../shared/components/Button/FilterButton/FilterButton";
+import FilterButton from "../../../shared/components/Button/FilterButton/FilterButton";
 import './GraphFilters.scss';
 
 interface PropTypes {

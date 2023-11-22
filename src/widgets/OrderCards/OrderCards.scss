@@ -5,4 +5,16 @@
   gap: 12px;
   border-bottom: 1px solid #EAECF0;
   border-right: 1px solid #EAECF0;
+
+  .order-card {
+    position: relative;
+    
+    .red-dot {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: -8px;
+      top: -8px;
+    }
+  }
 }

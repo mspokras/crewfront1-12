@@ -1,5 +1,5 @@
 import React from 'react';
-import GraphFilters from "../../features/GraphFilters/GraphFilters";
+import GraphFilters from "../../features/Filters/GraphFilters/GraphFilters";
 import CustomerGraphContainer from "../../entities/Customer/components/CustomerGraphContainer/CustomerGraphContainer";
 import ViewReportButton from "../../features/ViewReportButton/ViewReportButton";
 

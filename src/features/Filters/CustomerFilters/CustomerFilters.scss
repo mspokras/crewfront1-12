@@ -1,0 +1,27 @@
+.customer-external-filters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .customer-filters-label {
+    font-weight: 500;
+  }
+
+  .customer-filters-inputs {
+    display: flex;
+    gap: 12px;
+
+    .form-control {
+      gap: 0;
+    }
+
+    .form-input {
+      border: 2px solid #bcc0c6 !important;
+      font-weight: 500;
+  
+      &:focus {
+        border: 2px solid black;
+      }
+    }
+  }
+}

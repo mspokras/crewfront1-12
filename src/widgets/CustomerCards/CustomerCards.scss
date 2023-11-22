@@ -3,10 +3,16 @@
   border-bottom: 1px solid #EAECF0;
   border-right: 1px solid #EAECF0;
 
-  .customer-filters {
+  .customer-filters-section {
     display: flex;
-    gap: 12px;
+    justify-content: space-between;
     margin-bottom: 16px;
+    
+    .customer-filters-status {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
   }
 
   .customer-cards {

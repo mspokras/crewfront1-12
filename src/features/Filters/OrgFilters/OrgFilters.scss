@@ -1,0 +1,14 @@
+.org-filters {
+  .form-control {
+    gap: 0;
+  }
+
+  .form-input {
+    border: 2px solid #bcc0c6 !important;
+    font-weight: 500;
+
+    &:focus {
+      border: 2px solid black;
+    }
+  }
+}

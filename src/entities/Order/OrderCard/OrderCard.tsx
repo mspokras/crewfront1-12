@@ -8,13 +8,21 @@ interface PropTypes {
   number: number;
   date: string;
   funds: number;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
+  children?: React.ReactNode;
 }
 
 const OrderCard = (props: PropTypes) => {
-  const { className, number, date, funds } = props;
+  const { className, number, date, funds, children, onMouseEnter, onMouseLeave } = props;
 
   return (
-    <div className={classNames("order-card", className)}>
+    <div 
+      className={classNames("order-card", className)}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
+      {children}
       <div className="order-content">
         <div className="order-number">#{number}</div>
         <div className="order-date">{date}</div>
