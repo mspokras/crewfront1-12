@@ -12,7 +12,7 @@ const BodyNavigation = () => {
         <nav className='nav-menu'>
             <NavLink icon={iconDashboard} label="My Dashboard" path="/dashboard" />
             <NavLink icon={iconCustomer} label="Customer Care" path="/customer-care" />
-            <NavLink icon={iconOrg} label="Organisations" path="/organisations" />
+            <NavLink icon={iconOrg} label="Organizations" path="/organizations" />
             <NavLink icon={iconContacts} label="Contacts" path="/contacts" />
             <NavLink icon={iconOrders} label="Orders" path="/orders" />
         </nav>

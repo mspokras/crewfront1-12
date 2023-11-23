@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './OrgCards.scss';
 import cardsData from './orgsData.json';
-import OrgCard from '../../entities/Organisation/OrgCard/OrgCard';
+import OrgCard from '../../entities/Organization/OrgCard/OrgCard';
 import SectionButton from '../../shared/components/Button/SectionButton/SectionButton';
 import OrgFilters from '../../features/Filters/OrgFilters/OrgFilters';
 
@@ -18,8 +18,8 @@ const OrgCards = () => {
   return (
     <div className='org-cards-container'>
       <div className="org-cards-header">
-        <SectionButton label="Add Organisation" isFilled={true} />
         <OrgFilters searchQuery={searchQuery} handleInputChange={handleInputChange} />
+        <SectionButton label="Add Organization" isFilled={true} />
       </div>
       <div className="org-cards-body">
         {filteredCards.map((card, index)=>(

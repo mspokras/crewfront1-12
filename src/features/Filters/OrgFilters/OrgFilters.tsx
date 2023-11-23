@@ -13,7 +13,7 @@ const OrgFilters = (props: PropTypes) => {
       <FormInput 
         type="search"
         id="search-form"
-        placeholder="Search organisation"
+        placeholder="Search organization"
         value={searchQuery || ''}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleInputChange(e.target.value)}
       />

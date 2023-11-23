@@ -3,7 +3,7 @@ import './App.scss';
 import Dashboard from "../../pages/Dashboard/Dashboard";
 import {Routes, Route} from "react-router-dom";
 import CustomerCare from '../../pages/CustomerCare/CustomerCare';
-import OrgContainer from '../../pages/Organisations/OrgContainer';
+import OrgContainer from '../../pages/Organizations/OrgContainer';
 import ContactsContainer from '../../pages/Contacts/ContactsContainer';
 import OrdersContainer from '../../pages/Orders/OrdersContainer';
 import LoginForm from '../../pages/Authorization/LoginForm/LoginForm';
@@ -14,7 +14,7 @@ function App() {
           <Route index element={<LoginForm/>}/>
           <Route path='/dashboard' element={<Dashboard/>}/>
           <Route path='/customer-care' element={<CustomerCare />} />
-          <Route path='/organisations' element={<OrgContainer />} />
+          <Route path='/organizations' element={<OrgContainer />} />
           <Route path='/contacts' element={<ContactsContainer />} />
           <Route path='/orders' element={<OrdersContainer />} />
       </Routes>

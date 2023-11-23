@@ -6,7 +6,7 @@ import OrgCards from '../../widgets/OrgCards/OrgCards';
 const OrgContainer = () => {
   return (
     <div className='org-container'>
-      <TemplatePage title="Organisations">
+      <TemplatePage title="Organizations">
         <OrgCards />
       </TemplatePage>
     </div>

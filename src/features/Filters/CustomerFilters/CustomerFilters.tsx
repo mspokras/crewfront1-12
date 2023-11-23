@@ -3,22 +3,22 @@ import './CustomerFilters.scss';
 import FormInput from '../../../shared/components/Input/FormInput/FormInput';
 
 interface PropTypes {
-  onFilterChange: (organisation: string, location: string) => void;
+  onFilterChange: (organization: string, location: string) => void;
 }
 
 const CustomerFilters = (props: PropTypes) => {
   const { onFilterChange } = props;
-  const [selectedOrganisation, setSelectedOrganisation] = useState('');
+  const [selectedOrganization, setSelectedOrganization] = useState('');
   const [selectedLocation, setSelectedLocation] = useState('');
 
-  const handleOrganisationChange = (value: string) => {
-    setSelectedOrganisation(value);
+  const handleOrganizationChange = (value: string) => {
+    setSelectedOrganization(value);
     onFilterChange(value, selectedLocation);
   };
 
   const handleLocationChange = (value: string) => {
     setSelectedLocation(value);
-    onFilterChange(selectedOrganisation, value);
+    onFilterChange(selectedOrganization, value);
   };
 
   return (
@@ -27,10 +27,10 @@ const CustomerFilters = (props: PropTypes) => {
       <div className="customer-filters-inputs">
         <FormInput
           type="text"
-          id="organisation-filter"
-          placeholder="Organisation"
-          value={selectedOrganisation}
-          onChange={(e) => handleOrganisationChange(e.target.value)}
+          id="organization-filter"
+          placeholder="Organization"
+          value={selectedOrganization}
+          onChange={(e) => handleOrganizationChange(e.target.value)}
         />
         <FormInput
           type="text"

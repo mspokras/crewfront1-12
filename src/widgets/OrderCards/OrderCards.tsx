@@ -13,20 +13,23 @@ const OrderCards = () => {
     const currentDate = new Date();
     const timeDifference = Number(currentDate) - Number(cardDate);
     const hoursDifference = timeDifference / (1000 * 60 * 60);
+    console.log(cardDate);
+    console.log(currentDate);
+    console.log(hoursDifference);
     return hoursDifference < 24;
   };
 
   const sortedCardsData = cardsData.sort((a, b) => {
-    const hasRedDotA = isWithinLast24Hours(a.date);
-    const hasRedDotB = isWithinLast24Hours(b.date);
+    const dateA = a.date;
+    const dateB = b.date;
+  
+    if (dateA > dateB) return -1;
+    if (dateA < dateB) return 1;
+  
+    if (a.number > b.number) return -1;
+    if (a.number < b.number) return 1;
     
-    if (hasRedDotA && !hasRedDotB) {
-      return -1;
-    } else if (!hasRedDotA && hasRedDotB) {
-      return 1;
-    } else {
-      return 0;
-    }
+    return 0;
   });
 
   return (

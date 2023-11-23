@@ -7,8 +7,8 @@ import CustomerFilters from '../../features/Filters/CustomerFilters/CustomerFilt
 
 const CustomerCards = () => {
   const [statusFilter, setStatusFilter] = useState("Needs Handling");
-  const [externalFilter, setExternalFilter] = useState({organisation: "", location: ""});
-  const { organisation: organisationFilter, location: locationFilter } = externalFilter;
+  const [externalFilter, setExternalFilter] = useState({organization: "", location: ""});
+  const { organization: organizationFilter, location: locationFilter } = externalFilter;
 
   const filters = {
     needsHandling: 'Needs Handling',
@@ -16,12 +16,22 @@ const CustomerCards = () => {
     all: 'All',
   };
 
+  const sortedCardsData = cardsData.sort((a, b) => {
+    const statusA = a.status;
+    const statusB = b.status;
+
+    const prioStatus = filters.needsHandling;
+    if (statusA === prioStatus && statusB !== prioStatus) return -1;
+    if (statusA !== prioStatus && statusB === prioStatus) return 1;
+    return 0;
+  });
+
   const handleFilterChange = (newFilter: string) => {
     setStatusFilter(newFilter);
   }
 
-  const handleExternalFiltersChange = (organisation: string, location: string) => {
-    setExternalFilter({organisation, location});
+  const handleExternalFiltersChange = (organization: string, location: string) => {
+    setExternalFilter({organization, location});
   };
 
   const filterCards = (status: string) => {
@@ -32,7 +42,7 @@ const CustomerCards = () => {
   };
 
   const filterByExternal = (card: any) => {
-    const organizationMatches = !organisationFilter || card.organisation === organisationFilter;
+    const organizationMatches = !organizationFilter || card.organization === organizationFilter;
     const locationMatches = !locationFilter || card.location === locationFilter;
     return organizationMatches && locationMatches;
   };
@@ -53,7 +63,7 @@ const CustomerCards = () => {
         <CustomerFilters onFilterChange={handleExternalFiltersChange} />
       </div>
       <div className='customer-cards'>
-        {cardsData
+        {sortedCardsData
           .filter((card) => filterCards(card.status) && filterByExternal(card))
           .map((card, index) => (
             <CustomerCard 
