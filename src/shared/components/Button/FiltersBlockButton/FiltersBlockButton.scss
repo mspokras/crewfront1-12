@@ -1,0 +1,30 @@
+.filters-block-button {
+  height: 36px;
+  padding: 8px 16px 8px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px 0px #1018280D;
+  cursor: pointer;
+
+  .filters-button-img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .filters-button-label {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+  }
+}

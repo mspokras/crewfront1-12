@@ -1,0 +1,12 @@
+.orders-filter-block {
+  width: 600px;
+  height: 275px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 2px solid black;
+  border-radius: 4px;
+  background-color: #fff;
+  z-index: 2;
+}

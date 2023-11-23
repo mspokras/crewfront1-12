@@ -3,19 +3,22 @@ import './OrgFilters.scss';
 import FormInput from '../../../shared/components/Input/FormInput/FormInput';
 
 interface PropTypes {
-  searchQuery?: string;
   handleInputChange: (value: string) => void;
+  placeholder?: string;
+  searchQuery?: string;
+  isDate?: boolean;
 }
 const OrgFilters = (props: PropTypes) => {
-  const { searchQuery, handleInputChange } = props;
+  const { handleInputChange, placeholder, searchQuery, isDate } = props;
   return (
     <div className='org-filters'>
       <FormInput 
         type="search"
         id="search-form"
-        placeholder="Search organization"
+        placeholder={placeholder}
         value={searchQuery || ''}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleInputChange(e.target.value)}
+        isDate={isDate}
       />
     </div>
   );

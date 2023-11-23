@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import CustomerCard from '../../entities/Customer/CustomerCard/CustomerCard';
 import cardsData from './customersData.json';
 import './CustomerCards.scss';
-import FilterButton from '../../shared/components/Button/FilterButton/FilterButton';
+import FilterTabButton from '../../shared/components/Button/FilterTabButton/FilterTabButton';
 import CustomerFilters from '../../features/Filters/CustomerFilters/CustomerFilters';
 
 const CustomerCards = () => {
@@ -52,7 +52,7 @@ const CustomerCards = () => {
       <div className="customer-filters-section">
         <div className="customer-filters-status">
           {Object.values(filters).map((filter) => (
-            <FilterButton 
+            <FilterTabButton 
               key={filter} 
               title={filter} 
               onClick={() => handleFilterChange(filter)} 

@@ -1,5 +1,5 @@
 import React from 'react';
-import './FilterButton.scss';
+import './FilterTabButton.scss';
 import classNames from "classnames";
 
 interface PropTypes {
@@ -7,7 +7,7 @@ interface PropTypes {
     isActive?: boolean;
     onClick?: () => void;
 }
-const FilterButton = (props: PropTypes) => {
+const FilterTabButton = (props: PropTypes) => {
     const { title, onClick, isActive } = props;
     return (
         <div className={classNames("filter-button-container", { 'active': isActive })} onClick={onClick}>
@@ -16,4 +16,4 @@ const FilterButton = (props: PropTypes) => {
     );
 };
 
-export default FilterButton;
+export default FilterTabButton;

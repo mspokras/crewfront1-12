@@ -1,0 +1,21 @@
+.orders-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  .orders-filter-label {
+    font-weight: 600;
+  }
+
+  .org-filters {
+    width: 400px;
+
+    .form-input {
+      font-weight: 400 !important;
+      border-width: 2px !important;
+      &::placeholder {
+        font-weight: 400;
+      }
+    }
+  }
+}

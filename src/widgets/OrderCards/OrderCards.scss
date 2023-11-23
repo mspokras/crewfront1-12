@@ -1,20 +1,33 @@
-.order-cards {
+.order-cards-container {
   padding: 32px 32px 48px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
   border-bottom: 1px solid #EAECF0;
   border-right: 1px solid #EAECF0;
 
-  .order-card {
+  .order-cards-header {
+    margin-bottom: 32px;
     position: relative;
-    
-    .red-dot {
-      width: 20px;
-      height: 20px;
+
+    .orders-filter-block {
       position: absolute;
-      left: -8px;
-      top: -8px;
+      top: 38px;
+    }
+  }
+
+  .order-cards-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .order-card {
+      position: relative;
+      
+      .red-dot {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: -8px;
+        top: -8px;
+      }
     }
   }
 }

@@ -18,7 +18,11 @@ const OrgCards = () => {
   return (
     <div className='org-cards-container'>
       <div className="org-cards-header">
-        <OrgFilters searchQuery={searchQuery} handleInputChange={handleInputChange} />
+        <OrgFilters 
+          searchQuery={searchQuery} 
+          handleInputChange={handleInputChange} 
+          placeholder="Search organization"
+        />
         <SectionButton label="Add Organization" isFilled={true} />
       </div>
       <div className="org-cards-body">

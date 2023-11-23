@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import FilterButton from "../../../shared/components/Button/FilterButton/FilterButton";
+import FilterTabButton from "../../../shared/components/Button/FilterTabButton/FilterTabButton";
 import './GraphFilters.scss';
 
 interface PropTypes {
@@ -16,7 +16,7 @@ const GraphFilters = ({ filters }: PropTypes) => {
     return (
         <div className='graph-filters'>
             {filters.map((filter)=>(
-                <FilterButton 
+                <FilterTabButton 
                     key={filter} 
                     title={filter}
                     onClick={() => handleFilterClick(filter)}
