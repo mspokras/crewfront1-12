@@ -1,0 +1,19 @@
+.branch-control {
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+
+  .branch-input {
+    height: 36px;
+    padding: 8px 12px 4px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid gray;
+  }
+
+  .branch-label {
+    padding: 4px 12px;
+    color: gray;
+    font-size: 14px;
+  }
+}
