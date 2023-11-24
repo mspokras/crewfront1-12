@@ -1,7 +1,7 @@
 import React from 'react';
 import GraphFilters from "../../features/Filters/GraphFilters/GraphFilters";
 import CustomerGraphContainer from "../../entities/Customer/components/CustomerGraphContainer/CustomerGraphContainer";
-import ViewReportButton from "../../features/ViewReportButton/ViewReportButton";
+import ViewReportButton from "../../shared/components/Button/ViewReportButton/ViewReportButton";
 
 const CustomerGraph = () => {
     const customerFilters = ['7 Days', '30 Days', '1 Year', 'All']

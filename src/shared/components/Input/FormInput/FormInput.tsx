@@ -8,14 +8,14 @@ interface PropTypes {
   id?: string;
   type?: string;
   value?: string;
-  isDate?: boolean;
+  isMasked?: boolean;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const FormInput = React.forwardRef<HTMLInputElement,PropTypes>((props, ref) => {
-  const { label, placeholder, id, type, value, onChange, isDate, ...rest } = props;
+  const { label, placeholder, id, type, value, onChange, isMasked, ...rest } = props;
 
-  if (isDate) {
+  if (isMasked) {
     return (
       <div className="form-control">
         <label className="form-label" htmlFor="form-input">{label}</label>

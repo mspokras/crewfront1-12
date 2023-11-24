@@ -21,14 +21,32 @@
     color: #fff;
     background-color: #141A7F;
   }
+  
+  .section-button-link {
+    color: #141A7F;
+
+    &:hover {
+      color: #fff;
+    }
+  }
 }
+
 .filled {
-  background-color: #141A7F !important;
-  color: #ffffff  !important;
-  transition: 0.3s ease;
+  background-color: #141A7F;
+  color: #ffffff;
 
   &:hover {
-    background-color: #fff !important;
-    color: #141A7F !important;
+    background-color: #fff;
+    color: #141A7F;
+  }
+
+  .section-button-link {
+    background-color: inherit;
+    color: inherit;
+
+    &:hover {
+      color: inherit;
+      background-color: inherit;
+    }
   }
 }

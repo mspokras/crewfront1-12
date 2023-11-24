@@ -1,0 +1,24 @@
+.template-form-page {
+  background-color: #FAFAFC;
+  padding: 100px 52px 48px;
+
+  .template-form-button {
+    padding: 8px 16px;
+    border: none;
+    background-color: transparent;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 36px;
+    left: 36px;
+
+    img {
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+    }
+  }
+}

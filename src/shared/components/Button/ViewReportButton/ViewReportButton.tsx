@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionButton from '../../shared/components/Button/SectionButton/SectionButton';
+import SectionButton from '../SectionButton/SectionButton';
 
 const ViewReportButton = () => {
     return (

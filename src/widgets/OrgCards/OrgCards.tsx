@@ -23,7 +23,7 @@ const OrgCards = () => {
           handleInputChange={handleInputChange} 
           placeholder="Search organization"
         />
-        <SectionButton label="Add Organization" isFilled={true} />
+        <SectionButton label="Add Organization" isFilled={true} path="/register-org" />
       </div>
       <div className="org-cards-body">
         {filteredCards.map((card, index)=>(

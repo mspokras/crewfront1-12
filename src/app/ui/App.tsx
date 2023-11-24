@@ -7,6 +7,7 @@ import OrgContainer from '../../pages/Organizations/OrgContainer';
 import ContactsContainer from '../../pages/Contacts/ContactsContainer';
 import OrdersContainer from '../../pages/Orders/OrdersContainer';
 import LoginForm from '../../pages/Authorization/LoginForm/LoginForm';
+import RegisterOrg from '../../pages/Organizations/RegisterOrg/RegisterOrg';
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/organizations' element={<OrgContainer />} />
           <Route path='/contacts' element={<ContactsContainer />} />
           <Route path='/orders' element={<OrdersContainer />} />
+          <Route path='/register-org' element={<RegisterOrg />} />
       </Routes>
     );
 }
