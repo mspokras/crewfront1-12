@@ -8,6 +8,8 @@ import ContactsContainer from '../../pages/Contacts/ContactsContainer';
 import OrdersContainer from '../../pages/Orders/OrdersContainer';
 import LoginForm from '../../pages/Authorization/LoginForm/LoginForm';
 import RegisterOrg from '../../pages/Organizations/RegisterOrg/RegisterOrg';
+import ContactBranch from '../../pages/Contacts/ContactBranch/ContactBranch';
+import OrgScreen from '../../pages/Organizations/OrgScreen/OrgScreen';
 
 function App() {
     return (
@@ -19,6 +21,8 @@ function App() {
           <Route path='/contacts' element={<ContactsContainer />} />
           <Route path='/orders' element={<OrdersContainer />} />
           <Route path='/register-org' element={<RegisterOrg />} />
+          <Route path='/contact-branch' element={<ContactBranch />} />
+          <Route path='/org-screen' element={<OrgScreen />} />
       </Routes>
     );
 }

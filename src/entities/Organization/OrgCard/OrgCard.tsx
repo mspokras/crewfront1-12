@@ -42,7 +42,7 @@ const OrgCard = (props: PropTypes) => {
           <EmailLink email={email} className="org-email" />
          </div>
       </div>
-      <SectionButton label="Show organization" isFilled={false} />
+      <SectionButton label="Show organization" isFilled={false} path="/org-screen" />
     </div>
   );
 };

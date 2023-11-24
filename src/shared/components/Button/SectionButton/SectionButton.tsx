@@ -21,10 +21,10 @@ const SectionButton = (props: PropTypes) => {
       {label}
     </Link>
   ) : (
-    <span>
+    <>
       {children}
       {label}
-    </span>
+    </>
   );
 
   return (

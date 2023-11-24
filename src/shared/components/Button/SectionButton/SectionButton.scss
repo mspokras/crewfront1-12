@@ -23,10 +23,12 @@
   }
   
   .section-button-link {
-    color: #141A7F;
+    color: inherit;
+    background-color: inherit;
 
     &:hover {
-      color: #fff;
+      color: inherit;
+      background-color: inherit;
     }
   }
 }
