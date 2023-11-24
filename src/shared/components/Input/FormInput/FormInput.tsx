@@ -26,7 +26,7 @@ const FormInput = React.forwardRef<HTMLInputElement,PropTypes>((props, ref) => {
           mask="99-99-9999"
           placeholder={placeholder}
           onChange={onChange}
-          value={value || ''}
+          value={value || undefined}
           {...rest}
         />
       </div>
@@ -43,7 +43,7 @@ const FormInput = React.forwardRef<HTMLInputElement,PropTypes>((props, ref) => {
         type={type || "text"} 
         placeholder={placeholder}  
         onChange={onChange}
-        value={value || ''}
+        value={value || undefined}
         {...rest}
       />
     </div>

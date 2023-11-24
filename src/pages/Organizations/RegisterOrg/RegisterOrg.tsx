@@ -5,7 +5,7 @@ import RegOrgSection from '../../../features/RegOrgSection/RegOrgSection';
 import SectionButton from '../../../shared/components/Button/SectionButton/SectionButton';
 import { regOrgInputsData as inputsData } from './regOrgInputs';
 import * as yup from "yup";
-import { SubmitErrorHandler, SubmitHandler, useForm } from "react-hook-form";
+import { FieldValues, SubmitErrorHandler, SubmitHandler, UseFormRegister, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from 'react-router-dom';
 
@@ -16,9 +16,25 @@ const yupSchema = yup
         contact_phone: yup.string().required('Required field'),
         contact_email: yup.string().required('Required field'),
         branch_orgName: yup.string().required('Required field'),
-        branch_regNumber: yup.number().typeError('Number required').required('Required field'),
+        branch_regNumber: yup
+          .number()
+          .typeError('Number required')
+          .required('Required field')
+          .test(
+            'is-ten-digits',
+            'Number must be 10 digits',
+            (value) => value.toString().length === 10
+          ),
         branch_regDate: yup.string().required('Required field'),
-        branch_taxNumber: yup.number().typeError('Number required').required('Required field'),
+        branch_taxNumber: yup
+          .number()
+          .typeError('Number required')
+          .required('Required field')
+          .test(
+            'is-fifteen-digits',
+            'Number must be 15 digits',
+            (value) => value.toString().length === 15
+          ),
         branch_city: yup.string().required('Required field'),
         branch_country: yup.string().required('Required field'),
         org_branchName: yup.string().required('Required field'),
@@ -41,24 +57,23 @@ const RegisterOrg = () => {
     formState: { errors },
   } =
   useForm({
-      mode: "onChange",
-      resolver: yupResolver(yupSchema),
-      defaultValues: {
-        contact_firstName: '',
-        contact_lastName: '',
-        contact_phone: '',
-        contact_email: '',
-        branch_orgName: '',
-        branch_regNumber: undefined,
-        branch_regDate: '',
-        branch_taxNumber: undefined,
-        branch_city: '',
-        branch_country: '',
-        org_city: '',
-        org_district: '',
-        org_location: '',
-        org_workplace: '',
-      },
+    resolver: yupResolver(yupSchema),
+    defaultValues: {
+      contact_firstName: '',
+      contact_lastName: '',
+      contact_phone: '',
+      contact_email: '',
+      branch_orgName: '',
+      branch_regNumber: undefined,
+      branch_regDate: '',
+      branch_taxNumber: undefined,
+      branch_city: '',
+      branch_country: '',
+      org_city: '',
+      org_district: '',
+      org_location: '',
+      org_workplace: '',
+    },
   });
 
   const onSubmitHandler: SubmitHandler<YupSchemaType> = () => {
@@ -77,19 +92,19 @@ const RegisterOrg = () => {
           <RegOrgSection 
             category="Contact" 
             inputEntries={contactInputs} 
-            register={register} 
+            register={register as unknown as UseFormRegister<FieldValues>} 
             errors={errors} 
           />
           <RegOrgSection 
             category="Branch" 
             inputEntries={branchInputs} 
-            register={register} 
+            register={register as unknown as UseFormRegister<FieldValues>} 
             errors={errors} 
           />
           <RegOrgSection 
             category="Organization" 
             inputEntries={orgInputs} 
-            register={register} 
+            register={register as unknown as UseFormRegister<FieldValues>} 
             errors={errors} 
           />
         </div>
