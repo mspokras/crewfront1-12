@@ -30,8 +30,8 @@ const ContactBranch = () => {
   return (
     <TemplateFormPage>
       <div className='contact-branch'>
-      <div className="branch-name">McDonalds Kyiv</div>
-          <div className="contact-branch-body">
+        <div className="branch-name">McDonalds Kyiv</div>
+        <div className="contact-branch-body">
           <div className="branch-org-info">
             <div className="branch-org-name">McDonalds Global Corp.</div>
             <SectionButton label="Organization page" path="/org-screen" />
