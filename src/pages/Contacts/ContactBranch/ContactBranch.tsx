@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './ContactBranch.scss';
 import TemplateFormPage from '../../TemplateFormPage/TemplateFormPage';
 import SectionButton from '../../../shared/components/Button/SectionButton/SectionButton';
 import WhatsAppLink from '../../../shared/components/Link/WhatsAppLink/WhatsAppLink';
 import EmailLink from '../../../shared/components/Link/EmailLink/EmailLink';
-import { Link } from 'react-router-dom';
 import BranchInput from '../../../shared/components/Input/BranchInput/BranchInput';
 
 const ContactBranch = () => {
@@ -31,16 +30,16 @@ const ContactBranch = () => {
   return (
     <TemplateFormPage>
       <div className='contact-branch'>
-        <Link to="/org-screen" className="branch-name">
-          McDonalds Kyiv
-        </Link>
-        <div className="contact-branch-body">
+      <div className="branch-name">McDonalds Kyiv</div>
+          <div className="contact-branch-body">
           <div className="branch-org-info">
             <div className="branch-org-name">McDonalds Global Corp.</div>
+            <SectionButton label="Organization page" path="/org-screen" />
             <div className="branch-supervisor">
               <div className="supervisor-title">Supervisor</div>
               <div className="supervisor-name">Alice Miller</div>
               <WhatsAppLink phone="+1(555)123-4567" className='supervisor-phone' />
+              <EmailLink email="alice.miller@mcd.org" className="supervisor-email" />
             </div>
             <div className="branch-city"><b>City:</b> Kyiv</div>
             <div className="branch-district"><b>District:</b> Pecherskyy District</div>
