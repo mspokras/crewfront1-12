@@ -10,6 +10,7 @@ import LoginForm from '../../pages/Authorization/LoginForm/LoginForm';
 import RegisterOrg from '../../pages/Organizations/RegisterOrg/RegisterOrg';
 import ContactBranch from '../../pages/Contacts/ContactBranch/ContactBranch';
 import OrgScreen from '../../pages/Organizations/OrgScreen/OrgScreen';
+import Settings from '../../pages/UserProfile/Settings/Settings';
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
           <Route path='/register-org' element={<RegisterOrg />} />
           <Route path='/contact-branch' element={<ContactBranch />} />
           <Route path='/org-screen' element={<OrgScreen />} />
+          <Route path='/settings' element={<Settings />} />
       </Routes>
     );
 }

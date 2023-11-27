@@ -1,0 +1,72 @@
+.settings {
+  padding: 28px 96px;
+
+  .settings-title {
+    margin-bottom: 32px;
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  .settings-admins {
+    .settings-admins-title {
+      margin-bottom: 24px;
+      font-size: 22px;
+    }
+    .settings-admin {
+      width: 1100px;
+      padding: 10px 0;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid lightgray;
+
+      .settings-admin-name {
+        width: 270px;
+        font-weight: 500;
+      }
+
+      .settings-admin-role {
+        width: 200px;
+      }
+
+      .settings-admin-email {
+        display: block;
+        width: 350px;
+      }
+
+      .btn-remove-admin {
+        background-color: orangered;
+        border: 1px solid transparent;
+        margin: 0 0 0 10px !important;
+
+        &:hover {
+          color: orangered;
+          background-color: #fff;
+          border: 1px solid orangered;
+        }
+      }
+    }
+
+    .settings-new-admin {
+      margin-top: 20px;
+      display: flex;
+      gap: 24px;
+
+      .branch-control {
+        width: 246px;
+
+        &:nth-of-type(2) {
+          width: 176px;
+        }
+
+        &:last-of-type {
+          width: 326px;
+        }
+      }
+    }
+
+    .section-button.filled {
+      margin-top: 24px;
+    }
+  }  
+}

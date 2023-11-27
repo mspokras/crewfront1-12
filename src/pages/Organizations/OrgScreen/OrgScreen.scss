@@ -23,7 +23,7 @@
 
     .org-key-data {
       .org-balance {
-        margin-bottom: 24px;
+        margin-bottom: 28px;
         .org-balance-label {
           margin-bottom: 10px;
           font-size: 20px;
@@ -43,27 +43,30 @@
         }
 
         .org-branch {
-          font-size: 20px;
+          font-size: 18px;
+          margin-bottom: 10px;
         }
 
         .branch-control {
-          width: 165px;
-          margin-top: 6px;
+          width: 180px;
+          margin-top: 10px;
 
           .branch-input {
             padding: 4px 8px;
 
             &::placeholder {
-              font-size: 14px;
+              font-size: 16px;
               font-family: 'IBM Plex Sans', sans-serif;
             }
           }
         }
 
         .section-button {
+          margin-top: 10px;
           padding-left: 0;
           padding-top: 0;
           border: none;
+          font-size: 18px;
 
           &:hover {
             background-color: #fff;
@@ -75,10 +78,10 @@
 
     .ord-history {
       border-left: 1px solid lightgray;
-      padding-left: 20px;
+      padding-left: 32px;
 
       .ord-history-title {
-        margin-bottom: 14px;
+        margin-bottom: 20px;
         font-size: 20px;
         font-weight: 500;
       }
@@ -86,7 +89,7 @@
       .order-items {
         display: flex;
         flex-direction: column;
-        gap: 14px;
+        gap: 10px;
 
         .order-item {
           display: flex;
@@ -96,17 +99,17 @@
             align-items: center;
             font-size: 16px;
             .order-item-number {
-              width: 80px;
+              width: 100px;
               font-weight: 500;
               font-size: 18px;
             }
 
             .order-item-date {
-              width: 110px;
+              width: 125px;
             }
 
             .order-item-sum {
-              min-width: 105px;
+              min-width: 120px;
             }
           }
 
@@ -179,7 +182,6 @@
     margin-top: 36px;
     display: flex;
     justify-content: flex-end;
-    gap: 20px;
 
     .section-button {
       background-color: #CCCCCC;
