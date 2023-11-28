@@ -10,5 +10,9 @@
     &:focus {
       border: 2px solid black;
     }
+
+    &::placeholder {
+      font-weight: 500;
+    }
   }
 }

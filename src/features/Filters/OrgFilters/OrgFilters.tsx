@@ -18,7 +18,7 @@ const OrgFilters = (props: PropTypes) => {
         placeholder={placeholder}
         value={searchQuery || ''}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleInputChange(e.target.value)}
-        isMasked={isDate}
+        isDate={isDate}
       />
     </div>
   );

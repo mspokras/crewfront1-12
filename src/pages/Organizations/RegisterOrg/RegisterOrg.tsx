@@ -14,7 +14,7 @@ const yupSchema = yup
         contact_firstName: yup.string().required('Required field'),
         contact_lastName: yup.string().required('Required field'),
         contact_phone: yup.string().required('Required field'),
-        contact_email: yup.string().required('Required field'),
+        contact_email: yup.string().email("Invalid email format").required('Required field'),
         branch_orgName: yup.string().required('Required field'),
         branch_regNumber: yup
           .number()

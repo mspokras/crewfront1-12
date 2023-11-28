@@ -1,6 +1,5 @@
 import React from 'react';
 import './FormInput.scss';
-import InputMask from 'react-input-mask';
 
 interface PropTypes {
   label?: string;
@@ -8,30 +7,13 @@ interface PropTypes {
   id?: string;
   type?: string;
   value?: string;
-  isMasked?: boolean;
+  isDate?: boolean;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const FormInput = React.forwardRef<HTMLInputElement,PropTypes>((props, ref) => {
-  const { label, placeholder, id, type, value, onChange, isMasked, ...rest } = props;
-
-  if (isMasked) {
-    return (
-      <div className="form-control">
-        <label className="form-label" htmlFor="form-input">{label}</label>
-        <InputMask
-          className="form-input"
-          ref={ref}
-          id={type || "form-input"}
-          mask="99-99-9999"
-          placeholder={placeholder}
-          onChange={onChange}
-          value={value || undefined}
-          {...rest}
-        />
-      </div>
-    );
-  }
+  const { label, placeholder, id, type, value, onChange, isDate, ...rest } = props;
+  const inputType = isDate ? "date" : (type || "text");
 
   return (
     <div className="form-control">
@@ -39,8 +21,8 @@ const FormInput = React.forwardRef<HTMLInputElement,PropTypes>((props, ref) => {
       <input 
         className="form-input" 
         ref={ref} 
-        id={type || "form-input"} 
-        type={type || "text"} 
+        id={inputType} 
+        type={inputType} 
         placeholder={placeholder}  
         onChange={onChange}
         value={value || undefined}
