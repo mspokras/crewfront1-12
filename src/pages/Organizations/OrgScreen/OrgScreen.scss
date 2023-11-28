@@ -117,61 +117,12 @@
             margin: 0;
             padding: 0;
             border: none;
+            box-shadow: none;
   
             &:hover {
               background-color: #fff;
               color: #141A7F;
             }
-          }
-        }
-      }
-    }
-
-    .trans-history {
-      border-left: 1px solid lightgray;
-      padding-left: 20px;
-
-      .trans-history-title {
-        margin-bottom: 14px;
-        font-size: 20px;
-        font-weight: 500;
-      }
-    }
-
-    .trans-items {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      
-      .trans-item {
-        display: flex;
-        .trans-item-data {
-          display: flex;
-          align-items: center;
-          font-size: 16px;
-          .trans-item-number {
-            width: 80px;
-            font-weight: 500;
-            font-size: 18px;
-          }
-
-          .trans-item-date {
-            width: 110px;
-          }
-
-          .trans-item-sum {
-            min-width: 105px;
-          }
-        }
-
-        .section-button {
-          margin: 0;
-          padding: 0;
-          border: none;
-
-          &:hover {
-            background-color: #fff;
-            color: #141A7F;
           }
         }
       }

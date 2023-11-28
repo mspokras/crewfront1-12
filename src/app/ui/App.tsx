@@ -11,6 +11,7 @@ import RegisterOrg from '../../pages/Organizations/RegisterOrg/RegisterOrg';
 import ContactBranch from '../../pages/Contacts/ContactBranch/ContactBranch';
 import OrgScreen from '../../pages/Organizations/OrgScreen/OrgScreen';
 import Settings from '../../pages/UserProfile/Settings/Settings';
+import OrgBalance from '../../pages/Organizations/OrgBalance/OrgBalance';
 
 function App() {
     return (
@@ -25,6 +26,7 @@ function App() {
           <Route path='/contact-branch' element={<ContactBranch />} />
           <Route path='/org-screen' element={<OrgScreen />} />
           <Route path='/settings' element={<Settings />} />
+          <Route path='/org-balance' element={<OrgBalance />} />
       </Routes>
     );
 }

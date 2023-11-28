@@ -65,7 +65,7 @@ const OrgScreen = () => {
           </div>
         </div>
         <div className="org-screen-footer">
-          <SectionButton label="Record payment / Change credit line" />
+          <SectionButton label="Record payment / Change credit line" path="/org-balance" />
         </div>
       </div>
     </TemplateFormPage>
