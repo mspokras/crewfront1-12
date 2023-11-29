@@ -1,15 +1,13 @@
 import {FetchBaseQueryArgs} from "@reduxjs/toolkit/dist/query/fetchBaseQuery";
 
 export const baseQueryConfig: FetchBaseQueryArgs = {
-    // baseUrl: "http://localhost:5000",
-    prepareHeaders: (headers, {endpoint}) => {
-        // const session = getToken();
-        // const {language} = i18n;
-        // if (endpoint != 'getTranslateText') {
-        //     headers.set('Authorization', `Bearer ${session.token}`);
-        // }
-        // headers.set('Accept-Language', language);
-        // return headers;
+    baseUrl: "https://crew-back-fcc36df6bf06.herokuapp.com",
+    prepareHeaders: (headers) => {
+        headers.set('Content-Type', 'application/json');
+        headers.set('Accept', 'application/json');
+        headers.set('Access-Control-Allow-Origin', '*');
+
+        return headers;
     },
     headers: {
         'Content-Type': 'application/json',

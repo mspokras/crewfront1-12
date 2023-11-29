@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBAWPW8XXrnzgrbZq12RS4dluBccEdXrrM",
@@ -10,5 +11,11 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+
+export const provider = new GoogleAuthProvider();
+provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+provider.setCustomParameters({   
+  prompt : "select_account "
+});
 
 export default app;

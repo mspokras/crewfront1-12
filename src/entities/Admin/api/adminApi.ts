@@ -1,14 +1,21 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import {baseQueryConfig} from "../../../shared/api/api";
+import { baseQueryConfig } from "../../../shared/api/api";
+import { getToken } from '../admin.models';
 
 interface CreateAdminRequest {
+    name: string;
     email: string;
-    password: string;
+    status: string;
 }
 
-const adminConfig={
+const adminConfig = {
     ...baseQueryConfig,
-    baseUrl:baseQueryConfig.baseUrl+'/admin'
+    baseUrl: baseQueryConfig.baseUrl + '/admin',
+    prepareHeaders: (headers: Headers) => {
+      const session = getToken();
+      headers.set('Authorization', `${session.token}`);
+      return headers;
+    },
 }
 
 export const adminApi = createApi({
@@ -50,7 +57,15 @@ export const adminApi = createApi({
         method: 'DELETE',
       }),
       invalidatesTags: ['Admin'],
-    })
+    }),
+    triggerAdmin: builder.mutation<any, { email: string; uid: string }>({
+      query: ({ email, uid }) => ({
+        url: '/trigger',
+        method: 'POST',
+        body: { email, uid },
+      }),
+      invalidatesTags: ['Admin'],
+    }),
   }),
 })
 
@@ -59,4 +74,5 @@ export const {
   useCreateAdminMutation,
   useDeleteAdminMutation,
   useGetAdminByIdQuery,
-  useUpdateAdminMutation } = adminApi
+  useUpdateAdminMutation,
+  useTriggerAdminMutation } = adminApi

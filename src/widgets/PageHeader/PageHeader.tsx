@@ -1,7 +1,7 @@
 import React from 'react';
 import PageTitle from "../../shared/components/Title/PageTitle/PageTitle";
-import UserAvatar from "../../entities/user/components/UserAvatar/UserAvatar";
 import './PageHeader.scss';
+import UserAvatar from '../../entities/Customer/components/UserAvatar/UserAvatar';
 
 interface PropTypes {
     title?: string;
