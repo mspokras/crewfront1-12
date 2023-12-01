@@ -27,7 +27,7 @@ const yupSchema = yup
             'Number must be 10 digits',
             (value) => value.toString().length === 10
           ),
-        commercialRegExpiryDate: yup.string().required('Required field'),
+        commercialRegExpiryDate: yup.date().typeError("Invalid date format").required('Required field'),
         taxReg: yup
           .number()
           .typeError('Number required')
@@ -70,7 +70,7 @@ const RegisterOrg = () => {
       name: '',
       employeesAmount: undefined,
       commercialReg: undefined,
-      commercialRegExpiryDate: '',
+      commercialRegExpiryDate: undefined,
       taxReg: undefined,
       primaryBranch: '',
       branch: '',
@@ -83,10 +83,14 @@ const RegisterOrg = () => {
   });
 
   const formatOrgData = (formData: any) => {
+    const timestamp = new Date(formData.commercialRegExpiryDate).getTime() / 1000;
+
     const transformedData = {
       ...formData,
+      commercialRegExpiryDate: timestamp,
       balance: 0,
       creditLimit: 0,
+      employeesAmount: Number(formData.employeesAmount),
       primaryContact: {
         firstName: formData.firstName,
         lastName: formData.lastName,
@@ -102,9 +106,10 @@ const RegisterOrg = () => {
   const onSubmitHandler: SubmitHandler<YupSchemaType> = async () => {
     const orgInputs = getValues();
     const orgRegistered = formatOrgData(orgInputs);
+    console.log(orgRegistered);
     try {
       await createOrg(orgRegistered);
-      // navigate('/organizations')
+      navigate('/organizations');
     } catch (e) {
       console.log(e);
     }
