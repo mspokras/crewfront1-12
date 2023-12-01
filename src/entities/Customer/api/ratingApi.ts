@@ -7,7 +7,7 @@ const ratingConfig = {
     baseUrl: baseQueryConfig.baseUrl + '/rating',
     prepareHeaders: (headers: Headers) => {
       const session = getToken();
-      headers.set('Authorization', `Bearer ${session.token}`);
+      headers.set('Authorization', `${session.token}`);
       return headers;
     },
 }

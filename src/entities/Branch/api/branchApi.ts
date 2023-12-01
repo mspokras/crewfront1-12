@@ -7,7 +7,7 @@ const branchConfig = {
     baseUrl: baseQueryConfig.baseUrl + '/branch',
     prepareHeaders: (headers: Headers) => {
       const session = getToken();
-      headers.set('Authorization', `Bearer ${session.token}`);
+      headers.set('Authorization', `${session.token}`);
       return headers;
     },
 }

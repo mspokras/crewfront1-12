@@ -18,12 +18,10 @@ const LoginForm = () => {
     const handleSubmitForm = async () => {
         signInWithPopup(auth, provider)
         .then(async (result) => {
-            const credential = GoogleAuthProvider.credentialFromResult(result);
-            const token = credential?.accessToken;
+            // const credential = GoogleAuthProvider.credentialFromResult(result);
+            // const token = credential?.accessToken;
             const { uid, email, accessToken } = result.user as any;
             saveToken(accessToken!);
-            console.log(result);
-            console.log(token);
             await triggerAdmin({ email: email!, uid }).unwrap();
             
             navigate('/dashboard');

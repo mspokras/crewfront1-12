@@ -1,6 +1,25 @@
 import { Session } from "./admin.slice";
 const userTokenKey = "token";
 
+export interface IAdmin {
+    adminType: string;
+    email: string;
+    name?: string;
+    _id?: string | undefined;
+}
+
+export enum AdminTypes {
+    Super = 'super',
+    Accountant = 'accountant',
+    Ordinary = 'ordinary'
+}
+
+export interface CreateAdminRequest {
+    name: string;
+    email: string;
+    adminType: AdminTypes;
+}
+
 export interface CreateAdminResponse {
   adminId: string;
   isSuccess: boolean;

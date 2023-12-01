@@ -1,11 +1,14 @@
 import React from 'react';
 import Avatar from "../../../../shared/components/Avatar/Avatar";
 import './UserAvatar.scss';
+import { Link } from 'react-router-dom';
 
 const UserAvatar = () => {
     return (
         <div className='user-avatar'>
-            <Avatar/>
+            <Link to="/settings">
+                <Avatar/>
+            </Link>
         </div>
     );
 };

@@ -4,11 +4,19 @@ import cardsData from './customersData.json';
 import './CustomerCards.scss';
 import FilterTabButton from '../../shared/components/Button/FilterTabButton/FilterTabButton';
 import CustomerFilters from '../../features/Filters/CustomerFilters/CustomerFilters';
+// import { useGetRatingsQuery } from '../../entities/Customer/api/ratingApi';
 
 const CustomerCards = () => {
+  // const { data: ratingsData } = useGetRatingsQuery({ includeDetails: false });
   const [statusFilter, setStatusFilter] = useState("Needs Handling");
   const [externalFilter, setExternalFilter] = useState({organization: "", location: ""});
   const { organization: organizationFilter, location: locationFilter } = externalFilter;
+
+  // useEffect(() => {
+  //   if (ratingsData) {
+  //     console.log(ratingsData);
+  //   }
+  // }, [ratingsData]);
 
   const filters = {
     needsHandling: 'Needs Handling',

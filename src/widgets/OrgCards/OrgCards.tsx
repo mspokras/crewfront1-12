@@ -1,15 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './OrgCards.scss';
 import cardsData from './orgsData.json';
 import OrgCard from '../../entities/Organization/OrgCard/OrgCard';
 import SectionButton from '../../shared/components/Button/SectionButton/SectionButton';
 import OrgFilters from '../../features/Filters/OrgFilters/OrgFilters';
+import { useGetOrganizationsQuery } from '../../entities/Organization/api/organizationApi';
+import { IOrganization } from '../../entities/Organization/org.models';
 
 const OrgCards = () => {
+  const { data: orgData } = useGetOrganizationsQuery();
+  const [organizations, setOrganizations] = useState<IOrganization[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const filteredCards = cardsData.filter((card) =>
     card.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  useEffect(() => {
+    if (orgData) {
+      console.log(orgData)
+    }
+  }, [orgData]);
 
   const handleInputChange = (value: string) => {
     setSearchQuery(value);

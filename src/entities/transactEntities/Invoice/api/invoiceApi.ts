@@ -7,7 +7,7 @@ const invoiceConfig = {
     baseUrl: baseQueryConfig.baseUrl + '/invoice',
     prepareHeaders: (headers: Headers) => {
       const session = getToken();
-      headers.set('Authorization', `Bearer ${session.token}`);
+      headers.set('Authorization', `${session.token}`);
       return headers;
     },
 }

@@ -1,12 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { baseQueryConfig } from "../../../shared/api/api";
-import { getToken } from '../admin.models';
-
-interface CreateAdminRequest {
-    name: string;
-    email: string;
-    status: string;
-}
+import { CreateAdminRequest, getToken } from '../admin.models';
 
 const adminConfig = {
     ...baseQueryConfig,
@@ -51,7 +45,7 @@ export const adminApi = createApi({
       }),
       invalidatesTags: ['Admin'],
     }),
-    deleteAdmin: builder.mutation<any, string>({
+    deleteAdmin: builder.mutation<boolean, string>({
       query: (id) => ({
         url: `/${id}`,
         method: 'DELETE',
