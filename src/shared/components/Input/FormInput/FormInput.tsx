@@ -25,7 +25,7 @@ const FormInput = React.forwardRef<HTMLInputElement,PropTypes>((props, ref) => {
         type={inputType} 
         placeholder={placeholder}  
         onChange={onChange}
-        value={value || undefined}
+        value={value}
         {...rest}
       />
     </div>

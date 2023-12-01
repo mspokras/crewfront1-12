@@ -8,15 +8,17 @@ import * as yup from "yup";
 import { FieldValues, SubmitErrorHandler, SubmitHandler, UseFormRegister, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from 'react-router-dom';
+import { useCreateOrganizationMutation } from '../../../entities/Organization/api/organizationApi';
 
 const yupSchema = yup
     .object({
-        contact_firstName: yup.string().required('Required field'),
-        contact_lastName: yup.string().required('Required field'),
-        contact_phone: yup.string().required('Required field'),
-        contact_email: yup.string().email("Invalid email format").required('Required field'),
-        org_orgName: yup.string().required('Required field'),
-        org_regNumber: yup
+        firstName: yup.string().required('Required field'),
+        lastName: yup.string().required('Required field'),
+        phone: yup.string().required('Required field'),
+        email: yup.string().email("Invalid email format").required('Required field'),
+        name: yup.string().required('Required field'),
+        employeesAmount: yup.number().typeError('Number required').required('Required field'),
+        commercialReg: yup
           .number()
           .typeError('Number required')
           .required('Required field')
@@ -25,8 +27,8 @@ const yupSchema = yup
             'Number must be 10 digits',
             (value) => value.toString().length === 10
           ),
-        org_regDate: yup.string().required('Required field'),
-        org_taxNumber: yup
+        commercialRegExpiryDate: yup.string().required('Required field'),
+        taxReg: yup
           .number()
           .typeError('Number required')
           .required('Required field')
@@ -35,13 +37,13 @@ const yupSchema = yup
             'Number must be 15 digits',
             (value) => value.toString().length === 15
           ),
-        org_primaryBranch: yup.string().required('Required field'),
-        branch_branchName: yup.string().required('Required field'),
-        branch_country: yup.string().required('Required field'),
-        branch_city: yup.string().required('Required field'),
-        branch_district: yup.string().required('Required field'),
-        branch_location: yup.string().required('Required field'),
-        branch_workplace: yup.string().required('Required field'),
+        primaryBranch: yup.string().required('Required field'),
+        branch: yup.string().required('Required field'),
+        country: yup.string().required('Required field'),
+        city: yup.string().required('Required field'),
+        district: yup.string().required('Required field'),
+        location: yup.string().required('Required field'),
+        workplace: yup.string().required('Required field'),
     })
     .required();
 
@@ -50,35 +52,62 @@ type YupSchemaType = yup.InferType<typeof yupSchema>;
 const RegisterOrg = () => {
   const navigate = useNavigate();
   const { contactInputs, branchInputs, orgInputs } = inputsData;
+  const [createOrg] = useCreateOrganizationMutation();
 
   const {
     register,
     handleSubmit,
+    getValues,
     formState: { errors },
   } =
   useForm({
     resolver: yupResolver(yupSchema),
     defaultValues: {
-      contact_firstName: '',
-      contact_lastName: '',
-      contact_phone: '',
-      contact_email: '',
-      org_orgName: '',
-      org_regNumber: undefined,
-      org_regDate: '',
-      org_taxNumber: undefined,
-      org_primaryBranch: '',
-      branch_branchName: '',
-      branch_country: '',
-      branch_city: '',
-      branch_district: '',
-      branch_location: '',
-      branch_workplace: '',
+      firstName: '',
+      lastName: '',
+      phone: '',
+      email: '',
+      name: '',
+      employeesAmount: undefined,
+      commercialReg: undefined,
+      commercialRegExpiryDate: '',
+      taxReg: undefined,
+      primaryBranch: '',
+      branch: '',
+      country: '',
+      city: '',
+      district: '',
+      location: '',
+      workplace: '',
     },
   });
 
-  const onSubmitHandler: SubmitHandler<YupSchemaType> = () => {
-    navigate('/organizations');
+  const formatOrgData = (formData: any) => {
+    const transformedData = {
+      ...formData,
+      balance: 0,
+      creditLimit: 0,
+      primaryContact: {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        phone: formData.phone,
+        email: formData.email,
+      },
+      branches: [formData.branch, formData.primaryBranch],
+    };  
+  
+    return transformedData;
+  };  
+
+  const onSubmitHandler: SubmitHandler<YupSchemaType> = async () => {
+    const orgInputs = getValues();
+    const orgRegistered = formatOrgData(orgInputs);
+    try {
+      await createOrg(orgRegistered);
+      // navigate('/organizations')
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   const onError: SubmitErrorHandler<any> = (value: any) => {
@@ -110,7 +139,7 @@ const RegisterOrg = () => {
           />
         </div>
         <div className="register-org-button">
-          <SectionButton label="Submit" type="submit" isFilled={true} path="/organizations" />
+          <SectionButton label="Submit" type="submit" isFilled={true} />
         </div>
       </form>
     </TemplateFormPage>

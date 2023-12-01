@@ -26,6 +26,7 @@ const RegOrgSection = (props: PropTypes) => {
           <FormInput 
             label={entry.label} 
             placeholder={`Enter ${entry.label.toLowerCase()}`} 
+            isDate={entry.name === 'commercialRegExpiryDate' ? true : false}
             {...register(entry.name)}
           />
           <div className="reg-org-error">{errors[entry.name]?.message}</div>
