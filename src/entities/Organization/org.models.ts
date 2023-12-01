@@ -1,14 +1,17 @@
 export interface IOrganization {
   _id?: string;
-  balance?: number;
-  city: string;
-  commercialReg: string;
-  commercialRegExpiryDate: Date;
+  balance: number;
+  commercialReg?: string;
+  commercialRegExpiryDate?: Date;
   creationDate?: Date;
   creditLimit?: number;
-  employeesAmount: number;
+  employeesAmount?: number;
   invoices?: any[];
   name: string;
+  ordersAmount?: number;
   payments?: any[];
-  taxReg: string;
+  primaryContact?: any;
+  ratingsAmount?: number;
+  ratingsAverage?: number;
+  taxReg?: string;
 }

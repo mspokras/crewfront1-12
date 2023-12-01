@@ -5,7 +5,7 @@ import { adminsData } from './adminsData';
 import SectionButton from '../../../shared/components/Button/SectionButton/SectionButton';
 import EmailLink from '../../../shared/components/Link/EmailLink/EmailLink';
 import BranchInput from '../../../shared/components/Input/BranchInput/BranchInput';
-import { adminApi, useCreateAdminMutation, useDeleteAdminMutation, useGetAdminsQuery } from '../../../entities/Admin/api/adminApi';
+import { adminApi, useCreateAdminMutation, useDeleteAdminMutation, useGetAdminsQuery, useUpdateAdminMutation } from '../../../entities/Admin/api/adminApi';
 import { logIn } from '../../../entities/Admin/admin.slice';
 import { useAppDispatch } from '../../../store/store';
 import { AdminTypes, IAdmin, saveToken } from '../../../entities/Admin/admin.models';
@@ -16,6 +16,7 @@ const Settings = () => {
   const { data: adminsBackData } = useGetAdminsQuery();
   const [createAdmin] = useCreateAdminMutation();
   const [deleteAdmin] = useDeleteAdminMutation();
+  const [editAdmin] = useUpdateAdminMutation();
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -50,7 +51,6 @@ const Settings = () => {
   };
 
   const handleDeleteAdmin = async (adminId: string) => {
-    console.log(adminId);
     try {
       const deleted = await deleteAdmin(adminId).unwrap();
       if (deleted) {
@@ -63,7 +63,7 @@ const Settings = () => {
     } 
   }
 
-  const handleEditAdminStatus = () => {}
+  const handleEditAdminStatus = (adminId: string) => {}
   
   return (
     <TemplateFormPage>
@@ -77,7 +77,10 @@ const Settings = () => {
               <div className="settings-admin-role">{admin.adminType}</div>
               <EmailLink email={admin.email} className="settings-admin-email" />
               <div className="settings-admin-btns">
-                <SectionButton label="Edit status" />
+                <SectionButton 
+                  label="Edit status"
+                  onClick={()=>handleEditAdminStatus(admin._id)} 
+                />
                 <SectionButton 
                   label="Remove admin" 
                   isFilled={true} 

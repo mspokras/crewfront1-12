@@ -17,48 +17,52 @@ export const regOrgInputsData = {
       name: "contact_email"
     }
   ],
-  branchInputs: [
+  orgInputs: [
     {
       label: "Organization name",
-      name: "branch_orgName"
+      name: "org_orgName"
     },
     {
       label: "Commercial Registration Number",
-      name: "branch_regNumber"
+      name: "org_regNumber"
     },
     {
       label: "Commercial Registration Expiry Date",
-      name: "branch_regDate"
+      name: "org_regDate"
     },
     {
       label: "Tax Registration",
-      name: "branch_taxNumber"
+      name: "org_taxNumber"
+    },
+    {
+      label: "Primary branch",
+      name: "org_primaryBranch"
+    },
+  ],
+  branchInputs: [
+    {
+      label: "Branch name",
+      name: "branch_branchName"
+    },
+    {
+      label: "Country",
+      name: "branch_country"
     },
     {
       label: "City",
       name: "branch_city"
     },
     {
-      label: "Country",
-      name: "branch_country"
-    }
-  ],
-  orgInputs: [
-    {
-      label: "City",
-      name: "org_city"
-    },
-    {
       label: "District",
-      name: "org_district"
+      name: "branch_district"
     },
     {
       label: "Location type",
-      name: "org_location"
+      name: "branch_location"
     },
     {
       label: "Workplace type",
-      name: "org_workplace"
+      name: "branch_workplace"
     }
   ]
 }

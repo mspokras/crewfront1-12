@@ -8,38 +8,37 @@ import WhatsAppLink from '../../../shared/components/Link/WhatsAppLink/WhatsAppL
 
 interface PropTypes {
   className: string;
-  rating: number;
+  ratingsAverage?: number;
   name: string;
-  orders: number;
-  funds: number;
-  phone: string;
-  email: string;
+  ordersAmount?: number;
+  balance: number;
+  primaryContact?: any;
 }
 
 const OrgCard = (props: PropTypes) => {
-  const { className, rating, name, orders, funds, phone, email } = props;
+  const { className, ratingsAverage, name, ordersAmount, balance, primaryContact } = props;
 
   return (
     <div className={classNames('org-card', className)}>
       <div className='org-content'>
         <div className='org-rating'>
           <img src={star} alt="star" />
-          <div className='org-avnum'>{rating.toFixed(1)}</div>
+          <div className='org-avnum'>{ratingsAverage ?? ''}</div>
         </div>
         <div className='org-name'>{name}</div>
         <div className='org-stats'>
           <div className='org-orders'>
-            <div className='org-orders-quantity'>{orders}</div>
+            <div className='org-orders-quantity'>{ordersAmount}</div>
             <div className='org-orders-label'>Orders Made</div>
           </div>
           <div className='org-funds'>
-            <div className='org-funds-quantity'>${funds}</div>
+            <div className='org-funds-quantity'>${balance}</div>
             <div className='org-funds-label'>Available Funds</div>
           </div>
         </div>
         <div className='org-contact'>
-          <WhatsAppLink phone={phone} className='org-phone' />
-          <EmailLink email={email} className="org-email" />
+          <WhatsAppLink phone={primaryContact?.phone ?? ''} className='org-phone' />
+          <EmailLink email={primaryContact?.email ?? ''} className="org-email" />
          </div>
       </div>
       <SectionButton label="Show organization" isFilled={false} path="/org-screen" />

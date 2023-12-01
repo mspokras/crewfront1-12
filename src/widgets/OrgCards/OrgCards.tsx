@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './OrgCards.scss';
-import cardsData from './orgsData.json';
 import OrgCard from '../../entities/Organization/OrgCard/OrgCard';
 import SectionButton from '../../shared/components/Button/SectionButton/SectionButton';
 import OrgFilters from '../../features/Filters/OrgFilters/OrgFilters';
@@ -11,19 +10,21 @@ const OrgCards = () => {
   const { data: orgData } = useGetOrganizationsQuery();
   const [organizations, setOrganizations] = useState<IOrganization[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
-  const filteredCards = cardsData.filter((card) =>
+  const filteredCards = organizations.filter((card) =>
     card.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   useEffect(() => {
     if (orgData) {
-      console.log(orgData)
+      setOrganizations(orgData);
     }
   }, [orgData]);
 
   const handleInputChange = (value: string) => {
     setSearchQuery(value);
   };
+
+  console.log(filteredCards);
 
   return (
     <div className='org-cards-container'>
@@ -38,7 +39,7 @@ const OrgCards = () => {
       <div className="org-cards-body">
         {filteredCards.map((card, index)=>(
           <OrgCard 
-            key={card.id} 
+            key={card._id} 
             className={index % 2 === 0 ? 'blue-card' : 'white-card'} 
             {...card} 
           />
